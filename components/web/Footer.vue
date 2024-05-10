@@ -76,13 +76,28 @@ const contactClass =
       </div>
       <UDivider class="my-7" :ui="{ border: { base: 'border-gray-800' } }" />
       <div class="text-xs grid items-center md:flex gap-3">
-        <NuxtLink to="/"> Şartlar ve Koşullar </NuxtLink>
+        <NuxtLink
+          to="/policy?value=membership-agreement-and-terms-of-use"
+          external
+        >
+          Üyelik Sözleşmesi ve Kullanım Koşulları</NuxtLink
+        >
         <UDivider
-          orientation="vertical"
-          class="h-5 md:flex hidden"
           :ui="{ border: { base: 'border-gray-800' } }"
+          class="h-5 md:flex hidden"
+          orientation="vertical"
         />
-        <NuxtLink to="/"> Gizlilik Politikası </NuxtLink>
+        <NuxtLink to="/policy?value=kvkk" external>
+          Gizlilik ve Kişisel Verileri Koruma Politikası
+        </NuxtLink>
+        <UDivider
+          :ui="{ border: { base: 'border-gray-800' } }"
+          class="h-5 md:flex hidden"
+          orientation="vertical"
+        />
+        <NuxtLink to="/policy?value=cookie" external
+          >Çerez Politikası
+        </NuxtLink>
         <span class="md:ml-auto">© 2024 Hayying Danışmanlık</span>
       </div>
     </UContainer>
