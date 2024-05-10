@@ -3,4 +3,5 @@
   <WebHomeFeatures />
   <WebHomeCourses />
   <WebHomeEvents />
+  <WebHomeContact />
 </template>
