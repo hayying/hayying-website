@@ -79,6 +79,7 @@ onMounted(() => {
       <UButton
         class="rounded-full ml-auto mt-5 px-7"
         label="Tüm Kursları Gör"
+        to="/courses"
         size="xl"
       />
     </UContainer>
