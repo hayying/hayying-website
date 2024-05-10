@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <section class="my-32">
+  <section class="mt-32">
     <WebHomeSectionHeader
       title="En Son Eklenen Kurslar"
       description="En son eklenen kursları keşfedin"
@@ -82,5 +82,6 @@ onMounted(() => {
         size="xl"
       />
     </UContainer>
+    <UDivider class="mt-12" />
   </section>
 </template>
