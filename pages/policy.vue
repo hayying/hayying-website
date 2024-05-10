@@ -1,13 +1,30 @@
 <script setup lang="ts">
 const { currentRoute } = useRouter();
 
-const { data }: { data: any } = await useApiFetch(
-  `/${currentRoute.value.query.value}-policy-page`
-);
+const query = currentRoute.value.query.value;
+
+const { data }: { data: any } = await useApiFetch(`/${query}-policy-page`);
+
+const policies = new Map([
+  [
+    "membership-agreement-and-terms-of-use",
+    "Üyelik Sözleşmesi ve Kullanım Koşulları",
+  ],
+  ["kvkk", "Gizlilik ve Kişisel Verileri Koruma Politikası"],
+  ["refund", "İade ve İptal Politikası"],
+  ["cookie", "Çerez Politikası"],
+]);
+
+useSeoMeta({
+  title: policies.get(query as string),
+});
 </script>
 
 <template>
-  <WebPageHeader img="/online-counseling.jpg" title="ONLİNE DANIŞMANLIK" />
+  <WebPageHeader
+    :title="policies.get(query as string)!.toUpperCase()"
+    img="/online-counseling.jpg"
+  />
   <UContainer class="mt-32">
     <MDC :value="data.data.attributes.policy" />
   </UContainer>
