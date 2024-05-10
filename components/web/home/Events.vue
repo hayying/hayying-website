@@ -41,12 +41,14 @@ const config = useRuntimeConfig();
           </div>
         </NuxtLink>
       </div>
-      <UButton
-        class="rounded-full ml-auto mt-5 px-7 mt-16"
-        label="Tüm Etkinlikleri Gör"
-        to="/events"
-        size="xl"
-      />
+      <UContainer class="flex w-full">
+        <UButton
+          class="rounded-full ml-auto mt-5 px-7"
+          label="Tüm Etkinlikleri Gör"
+          to="/events"
+          size="xl"
+        />
+      </UContainer>
     </UContainer>
   </section>
 </template>
