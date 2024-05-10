@@ -2,4 +2,5 @@
   <WebHomeHeroHeader />
   <WebHomeFeatures />
   <WebHomeCourses />
+  <WebHomeEvents />
 </template>
