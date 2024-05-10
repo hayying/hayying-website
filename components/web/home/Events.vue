@@ -11,7 +11,7 @@ const config = useRuntimeConfig();
       title="En Son Eklenen Etkinlikler"
       description="En son eklenen etkinlikleri keşfedin"
     />
-    <UContainer :ui="{ constrained: 'max-w-[100rem]' }" class="grid">
+    <UContainer class="grid">
       <div class="grid justify-center lg:grid-cols-2 gap-10 mt-12">
         <NuxtLink
           class="flex flex-wrap md:flex-nowrap group overflow-hidden break-all gap-5"
