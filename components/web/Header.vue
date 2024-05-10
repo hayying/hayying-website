@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const links = [
+const links = useState("links", () => [
   {
     label: "ANA SAYFA",
     to: "/",
@@ -24,10 +24,10 @@ const links = [
     label: "İLETİŞİM",
     to: "/contact",
   },
-];
+]);
 
 const slideoverLinks = [
-  ...links,
+  ...links.value,
   {
     label: "ONLİNE FORM",
     to: "/online-form",
