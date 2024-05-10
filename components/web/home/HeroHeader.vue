@@ -13,11 +13,15 @@
         orientation="horizontal"
         size="xl"
       >
-        <UInput class="sm:w-96" placeholder="Kurs, doküman, etkinlik ara..." />
+        <UInput
+          placeholder="Kurs, doküman, etkinlik ara..."
+          class="sm:w-96 border-b-0"
+          variant="outline"
+        />
         <UButton
           class="hover:bg-yellow-500 transition-all"
           color="purple"
-          label="ara"
+          label="Ara"
         />
       </UButtonGroup>
     </UContainer>

@@ -6,8 +6,9 @@ export default defineAppConfig({
       dynamic: true,
     },
     input: {
-      base: "border-b-2 border-gray-200 focus:border-primary-500",
-      rounded: "",
+      variant: {
+        none: "border-b-2 border-gray-200 focus:border-primary-500 rounded-none",
+      },
       default: {
         variant: "none",
       },
