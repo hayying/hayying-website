@@ -1,3 +1,4 @@
 <template>
+  <WebHeader />
   <slot />
 </template>
