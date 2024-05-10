@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     public: {
       apiUrl: process.env.API_URL,
       apiKey: process.env.API_KEY,
+      apiImgUrl: process.env.API_IMG_URL,
     },
   },
   colorMode: {
