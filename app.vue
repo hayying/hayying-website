@@ -7,7 +7,9 @@ useHead({
 </script>
 <template>
   <NuxtLayout>
-    <NuxtPage />
+    <div class="min-h-screen">
+      <NuxtPage />
+    </div>
   </NuxtLayout>
   <UNotifications />
   <NuxtLoadingIndicator />
