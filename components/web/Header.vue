@@ -83,7 +83,7 @@ const isOpen = ref(false);
     </div>
     <UButton
       label="ONLİNE FORM"
-      class="rounded-full text-black px-7 hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out hidden lg:block"
+      class="rounded-full text-black hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out hidden lg:block"
       color="yellow"
       size="lg"
     />

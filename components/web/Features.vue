@@ -1,21 +1,11 @@
 <script setup lang="ts">
-const features = [
-  {
-    title: "+200 Kurs",
-    description: "Çeşitli yeni konuları keşfedin",
-    icon: "ph:graduation-cap-light",
-  },
-  {
-    title: "Uzman öğretmenler",
-    description: "Sizin için doğru eğitmeni bulun",
-    icon: "solar:cup-outline",
-  },
-  {
-    title: "Hedefe odaklan",
-    description: "Kişisel uzmanlığınızı artırın",
-    icon: "icon-park-outline:target-one",
-  },
-];
+defineProps<{
+  features: {
+    title: string;
+    description: string;
+    icon: string;
+  }[];
+}>();
 </script>
 
 <template>
@@ -32,7 +22,7 @@ const features = [
         <h1 class="text-yellow-500 font-bold text-lg">
           {{ title }}
         </h1>
-        <p class="text-gray-300">{{ description }}</p>
+        <p class="text-gray-300 max-w-[19rem] text-center">{{ description }}</p>
       </div>
     </UContainer>
   </div>

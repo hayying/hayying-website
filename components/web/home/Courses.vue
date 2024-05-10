@@ -77,7 +77,7 @@ onMounted(() => {
     </UCarousel>
     <UContainer class="flex">
       <UButton
-        class="rounded-full ml-auto mt-5 px-7"
+        class="rounded-full ml-auto mt-5"
         label="Tüm Kursları Gör"
         to="/courses"
         size="xl"

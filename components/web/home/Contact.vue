@@ -11,7 +11,7 @@
           sint neque modi voluptatem iste! Libero, atque quas.
         </p>
         <UButton
-          class="rounded-full ml-auto mt-7 px-7"
+          class="rounded-full ml-auto mt-7"
           label="İletişime Geç"
           to="/contact"
           size="xl"

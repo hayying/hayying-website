@@ -43,7 +43,7 @@ const config = useRuntimeConfig();
       </div>
       <UContainer class="flex w-full">
         <UButton
-          class="rounded-full ml-auto mt-5 px-7"
+          class="rounded-full ml-auto mt-5"
           label="Tüm Etkinlikleri Gör"
           to="/events"
           size="xl"
