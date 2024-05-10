@@ -23,4 +23,9 @@ export default defineNuxtConfig({
   colorMode: {
     preference: "light",
   },
+  googleFonts: {
+    families: {
+      Poppins: [500],
+    },
+  },
 });
