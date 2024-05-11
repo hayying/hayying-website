@@ -38,16 +38,18 @@ const schema = z.object({
 
 type Schema = z.output<typeof schema>;
 
+const { email, firstname, lastname } = useUserStore();
+const loading = ref(false);
+const { add } = useToast();
+const file = ref();
+
 const state = reactive({
-  email: undefined,
-  name: undefined,
+  email: email || undefined,
+  name: `${firstname} ${lastname}` || undefined,
   topic: undefined,
   message: undefined,
   file: undefined,
 });
-const loading = ref(false);
-const { add } = useToast();
-const file = ref();
 
 async function onSubmit(event: FormSubmitEvent<Schema>) {
   loading.value = true;
