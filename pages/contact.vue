@@ -31,15 +31,19 @@ const schema = z.object({
     })
     .min(10, "Mesaj en az 10 karakter olmalıdır")
     .max(500, "Mesaj en fazla 500 karakter olmalıdır"),
+  file: z.string({
+    required_error: "Dosya alanı boş bırakılamaz",
+  }),
 });
 
 type Schema = z.output<typeof schema>;
 
 const state = reactive({
-  email: "",
-  name: "",
-  topic: "",
-  message: "",
+  email: undefined,
+  name: undefined,
+  topic: undefined,
+  message: undefined,
+  file: undefined,
 });
 const loading = ref(false);
 const { add } = useToast();
@@ -128,7 +132,7 @@ function onChange(files: FileList) {
         <UInput v-model="state.topic" placeholder="Konu" />
       </UFormGroup>
       <UFormGroup name="file">
-        <UInput type="file" @change="onChange" />
+        <UInput type="file" @change="onChange" v-model="state.file" />
       </UFormGroup>
       <UFormGroup name="message" class="col-span-2">
         <UTextarea
