@@ -58,9 +58,9 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
           Toplam: {{ totalPrice }}₺
         </p>
         <UButton
-          @click="navigateTo('/basket')"
           v-if="products.length > 0"
           label="Sepete Git"
+          to="/payment"
           size="lg"
           block
         />
