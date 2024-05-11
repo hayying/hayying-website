@@ -25,7 +25,7 @@ useSeoMeta({
     :title="policies.get(query as string)!.toUpperCase()"
     img="/online-counseling.jpg"
   />
-  <UContainer class="mt-32">
+  <UContainer class="my-32">
     <MDC :value="data.data.attributes.policy" />
   </UContainer>
 </template>
