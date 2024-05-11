@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   site: {
     url: "https://hayying.com",
     name: "Hayying",
-    description: "Hayying",
+    description: "Hayying Danışmanlık ve Sağlık Hizmetleri",
     defaultLocale: "tr",
   },
   runtimeConfig: {

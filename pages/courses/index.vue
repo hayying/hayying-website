@@ -1,4 +1,10 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Kurslar",
+  description: "Hayying Danışmanlık tarafından sunulan kurslar.",
+  ogImage: "/online-counseling.jpg",
+});
+
 const { data }: { data: any } = await useApiFetch("/courses?populate=*");
 const config = useRuntimeConfig();
 const type = ref("all");

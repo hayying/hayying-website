@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const { data }: { data: any } = await useApiFetch("/blogs?populate=*");
 const config = useRuntimeConfig();
+
+useSeoMeta({
+  title: "Blog",
+  description: "Hayying blog yazılarına göz atın",
+});
 </script>
 
 <template>

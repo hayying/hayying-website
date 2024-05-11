@@ -7,6 +7,14 @@ const { data }: { data: any } = await useApiFetch(
 );
 
 const config = useRuntimeConfig();
+
+useSeoMeta({
+  title: data.value.data[0].attributes.title,
+  description: data.value.data[0].attributes.description,
+  ogImage:
+    config.public.apiImgUrl +
+    data.value.data[0].attributes.thumbnail.data.attributes.url,
+});
 </script>
 
 <template>

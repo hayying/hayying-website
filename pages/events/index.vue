@@ -1,4 +1,8 @@
 <script setup lang="ts">
+useSeoMeta({
+  title: "Etkinlikler",
+  description: "Hayying etkinliklerine göz atın",
+});
 const { data }: { data: any } = await useApiFetch("/events?populate=*");
 </script>
 

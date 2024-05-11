@@ -16,6 +16,14 @@ const loading = ref(false);
 const { add } = useToast();
 const isOpen = ref(false);
 
+useSeoMeta({
+  title: data.value.data[0].attributes.title,
+  description: data.value.data[0].attributes.description,
+  ogImage:
+    config.public.apiImgUrl +
+    data.value.data[0].attributes.thumbnail.data.attributes.url,
+});
+
 const state = reactive({
   firstname: firstname || undefined,
   lastname: lastname || undefined,
