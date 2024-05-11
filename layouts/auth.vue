@@ -9,11 +9,11 @@ const src =
 <template>
   <div class="flex overflow-hidden relative">
     <div class="bg-white z-10 w-full md:w-[27rem]">
-      <header
+      <div
         class="bg-gradient-to-r from-primary-800 to-primary-600 p-5 grid place-items-center"
       >
         <Logo />
-      </header>
+      </div>
       <div class="p-12 relative">
         <slot />
         <p class="text-center text-gray-400 w-full">
