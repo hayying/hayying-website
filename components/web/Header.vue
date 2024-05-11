@@ -24,7 +24,14 @@ const links = useState("links", () => [
     label: "İLETİŞİM",
     to: "/contact",
   },
-]);
+]).value.map((link) => {
+  return {
+    ...link,
+    click: () => {
+      isOpen.value = false;
+    },
+  };
+});
 
 const buttonClass = "text-white hover:text-gray-100";
 const userStore = useUserStore();
@@ -108,7 +115,14 @@ onMounted(() => {
           size="xl"
         />
         <UVerticalNavigation
-          :links="[...links, { label: 'ONLİNE FORM', to: '/online-form' }]"
+          :links="[
+            ...links,
+            {
+              label: 'ONLİNE FORM',
+              to: '/online-form',
+              click: () => (isOpen = false),
+            },
+          ]"
           class="text-white"
         />
       </div>
