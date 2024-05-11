@@ -88,31 +88,47 @@ function onChange(files: FileList) {
   if (!files.length) return;
   file.value = files[0];
 }
+
+const features = [
+  {
+    title: "Adres",
+    description:
+      "Caddebostan, Caddebostan İskele Sk. No:17/202, 34734 Kadıköy/İstanbul",
+    icon: "mdi:address-marker-outline",
+  },
+  {
+    title: "E-posta",
+    description: "info@hayying.com adresinden bize ulaşabilirsiniz",
+    icon: "mdi:email",
+  },
+  {
+    title: "Telefon",
+    description:
+      "0 (216) 302 00 04 numaralı telefonumuzdan bize ulaşabilirsiniz",
+    icon: "mdi:phone",
+  },
+];
 </script>
 
 <template>
   <WebPageHeader img="/contact-banner.jpg" title="İLETİŞİM" />
-  <WebFeatures
-    :features="[
-      {
-        title: 'Adres',
-        description:
-          'Caddebostan, Caddebostan İskele Sk. No:17/202, 34734 Kadıköy/İstanbul',
-        icon: 'mdi:address-marker-outline',
-      },
-      {
-        title: 'E-posta',
-        description: 'info@hayying.com adresinden bize ulaşabilirsiniz',
-        icon: 'mdi:email',
-      },
-      {
-        title: 'Telefon',
-        description:
-          '0 (216) 302 00 04 numaralı telefonumuzdan bize ulaşabilirsiniz',
-        icon: 'mdi:phone',
-      },
-    ]"
-  />
+  <div class="bg-[#121921]">
+    <UContainer
+      class="py-7 text-white flex flex-col gap-10 md:flex-row flex-items-center justify-around"
+    >
+      <div
+        v-for="{ description, icon, title } in features"
+        :key="title"
+        class="grid place-items-center"
+      >
+        <UIcon :name="icon" class="text-5xl mb-3" />
+        <h1 class="text-primary-500 font-bold text-lg">
+          {{ title }}
+        </h1>
+        <p class="text-gray-300 max-w-[19rem] text-center">{{ description }}</p>
+      </div>
+    </UContainer>
+  </div>
   <UContainer class="my-32">
     <h1 class="text-2xl mb-3">İletişim Formu</h1>
     <p class="text-gray-500 mb-12">Size en kısa sürede dönüş yapaacağız.</p>
