@@ -7,6 +7,7 @@ const { data }: { data: any } = await useApiFetch(
 );
 
 const { isAuthenticated } = useUserStore();
+const { addProduct, alreadyAdded } = useBasketStore();
 const config = useRuntimeConfig();
 
 useSeoMeta({
@@ -52,6 +53,19 @@ useSeoMeta({
       </div>
       <UButton
         v-if="data.data[0].attributes.price !== 0"
+        :disabled="alreadyAdded(data.data[0].id)"
+        @click="
+          isAuthenticated
+            ? addProduct({
+                id: data.data[0].id,
+                image:
+                  config.public.apiImgUrl +
+                  data.data[0].attributes.thumbnail.url,
+                name: data.data[0].attributes.title,
+                price: data.data[0].attributes.price,
+              })
+            : navigateTo('/login')
+        "
         label="Sepete Ekle"
         size="xl"
         block

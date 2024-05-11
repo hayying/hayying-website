@@ -2,4 +2,5 @@
   <WebHeader />
   <slot />
   <WebFooter />
+  <WebBasket />
 </template>

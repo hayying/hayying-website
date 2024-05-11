@@ -10,3 +10,10 @@ export type User = {
   tcIdentificationNumber: string;
   diploma: boolean;
 };
+
+export type ProductProps = {
+  id: number;
+  name: string;
+  image: string;
+  price: number;
+};

@@ -58,6 +58,7 @@ function setType(value: string) {
             draggable="false"
           />
           <div
+            v-if="item.attributes.price !== 0"
             class="absolute bottom-0 left-5 bg-black opacity-70 text-white p-2 py-1"
           >
             {{ item.attributes.price }}₺
