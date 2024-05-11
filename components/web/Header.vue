@@ -26,13 +26,10 @@ const links = useState("links", () => [
   },
 ]);
 
-const slideoverLinks = [
-  ...links.value,
-  {
-    label: "ONLİNE FORM",
-    to: "/online-form",
-  },
-];
+const buttonClass = "text-white hover:text-gray-100";
+const userStore = useUserStore();
+const isAuthenticated = computed(() => userStore.isAuthenticated);
+const isOpen = ref(false);
 
 onMounted(() => {
   window.addEventListener("scroll", () => {
@@ -43,7 +40,6 @@ onMounted(() => {
     header?.classList.toggle("to-orange-700", show);
   });
 });
-const isOpen = ref(false);
 </script>
 
 <template>
@@ -69,17 +65,33 @@ const isOpen = ref(false);
         }"
       />
       <UButton
-        class="text-white hover:text-gray-100"
         icon="material-symbols:lock-outline"
+        v-if="!isAuthenticated"
+        :class="buttonClass"
         variant="link"
+        to="/login"
         size="xl"
       />
-      <UButton
-        class="text-white hover:text-gray-100"
-        icon="la:search"
-        variant="link"
-        size="xl"
-      />
+      <UDropdown
+        v-if="isAuthenticated"
+        :items="[
+          [
+            {
+              label: 'Panel',
+              to: '/dashboard',
+              icon: 'carbon:dashboard',
+            },
+            {
+              label: 'Çıkış Yap',
+              icon: 'material-symbols:logout',
+              click: userStore.logout,
+            },
+          ],
+        ]"
+      >
+        <UButton :class="buttonClass" icon="bx:user" variant="link" size="xl" />
+      </UDropdown>
+      <UButton :class="buttonClass" icon="la:search" variant="link" size="xl" />
     </div>
     <UButton
       label="ONLİNE FORM"
@@ -96,7 +108,10 @@ const isOpen = ref(false);
           variant="link"
           size="xl"
         />
-        <UVerticalNavigation :links="slideoverLinks" class="text-white" />
+        <UVerticalNavigation
+          :links="[...links, { label: 'ONLİNE FORM', to: '/online-form' }]"
+          class="text-white"
+        />
       </div>
     </USlideover>
   </header>
