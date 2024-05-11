@@ -5,7 +5,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
 
 <template>
   <UPopover
-    class="fixed bottom-10 right-10"
+    class="fixed bottom-10 right-10 z-50"
     :popper="{ arrow: true, offsetDistance: 20, placement: 'top-end' }"
   >
     <UChip :text="products.length" position="top-left" size="3xl" color="blue">
@@ -34,11 +34,11 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
           :key="product.id"
           v-else
         >
-          <div class="flex items-center justify-between gap-3">
+          <div class="flex items-center justify-between gap-2">
             <img
+              class="w-16 h-16 object-cover hidden sm:block"
               :src="product.image"
               alt="product"
-              class="w-16 h-16 object-cover"
             />
             <div class="flex-1 ml-3">
               <p class="text-lg">{{ product.name }}</p>
