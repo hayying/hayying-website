@@ -7,7 +7,7 @@ defineProps<{
 
 <template>
   <div
-    :class="`text-white h-[20rem] md:h-[28rem] bg-center grid place-items-center relative`"
+    class="text-white h-[20rem] md:h-[28rem] bg-center grid place-items-center relative border-b-[5px] border-yellow-500"
   >
     <img :src="img" class="w-full h-full object-cover absolute" />
     <div class="bg-indigo-800 w-full h-full opacity-50 absolute" />
