@@ -36,8 +36,8 @@ onMounted(() => {
     const header = document.querySelector("header");
     const show = window.scrollY > 0;
     header?.classList.toggle("bg-gradient-to-r", show);
-    header?.classList.toggle("from-purple-900", show);
-    header?.classList.toggle("to-orange-700", show);
+    header?.classList.toggle("from-primary-800", show);
+    header?.classList.toggle("to-primary-600", show);
   });
 });
 </script>
@@ -60,7 +60,7 @@ onMounted(() => {
         class="hidden lg:block"
         :ui="{
           inactive: 'text-white  hover:text-gray-100',
-          active: 'text-yellow-500  after:hidden',
+          active: 'text-black after:hidden',
           before: '',
         }"
       />
@@ -95,8 +95,7 @@ onMounted(() => {
     </div>
     <UButton
       label="ONLİNE FORM"
-      class="rounded-full text-black hover:bg-blue-500 hover:text-white transition duration-300 ease-in-out hidden lg:block"
-      color="yellow"
+      class="rounded-full text-black hidden lg:block"
       size="lg"
     />
     <USlideover v-model="isOpen" side="left">

@@ -19,7 +19,7 @@ defineProps<{
         class="grid place-items-center"
       >
         <UIcon :name="icon" class="text-5xl mb-3" />
-        <h1 class="text-yellow-500 font-bold text-lg">
+        <h1 class="text-primary-500 font-bold text-lg">
           {{ title }}
         </h1>
         <p class="text-gray-300 max-w-[19rem] text-center">{{ description }}</p>
