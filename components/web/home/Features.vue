@@ -8,13 +8,13 @@ const features = [
   },
   {
     title: "Etkinlikler",
-    to: "/courses",
+    to: "/events",
     image: "/feature-2.png",
     color: "orange",
   },
   {
     title: "Blog",
-    to: "/courses",
+    to: "/blog",
     image: "/feature-3.png",
     color: "blue",
   },
