@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/mdc",
+    "nuxt-vue3-google-signin",
   ],
   site: {
     url: "https://hayying.com",
@@ -28,5 +29,8 @@ export default defineNuxtConfig({
     families: {
       Poppins: [500],
     },
+  },
+  googleSignIn: {
+    clientId: process.env.GOOGLE_CLIENT_ID,
   },
 });
