@@ -18,7 +18,7 @@ const links = useState("links", () => [
   },
   {
     label: "BLOG",
-    to: "/blogs",
+    to: "/blog",
   },
   {
     label: "İLETİŞİM",
