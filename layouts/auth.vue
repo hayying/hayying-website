@@ -16,7 +16,9 @@ const src =
       </div>
       <div class="p-12 relative">
         <slot />
-        <p class="text-center text-gray-400 w-full">
+        <p
+          class="text-center text-gray-400 w-full absolute bottom-[13rem] left-[50%] transform translate-x-[-50%]"
+        >
           © 2024 Hayying Danışmanlık
         </p>
       </div>
