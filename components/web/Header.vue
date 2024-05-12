@@ -101,8 +101,9 @@ onMounted(() => {
       <UButton :class="buttonClass" icon="la:search" variant="link" size="xl" />
     </div>
     <UButton
-      label="ONLİNE FORM"
       class="rounded-full text-black hidden lg:block"
+      label="ONLİNE FORM"
+      to="/online-form"
       size="lg"
     />
     <USlideover v-model="isOpen" side="left">
