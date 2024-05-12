@@ -1,3 +1,11 @@
+<script setup lang="ts">
+const isOpen = useState("search");
+
+function onFocus(e: any) {
+  e.target.select();
+}
+</script>
+
 <template>
   <section
     class="bg-[url('/heroheader-banner.jpg')] bg-cover h-[40rem] bg-center grid place-items-center relative"
@@ -16,9 +24,11 @@
         <UInput
           placeholder="Kurs, doküman, etkinlik ara..."
           class="sm:w-96 border-b-0"
+          @click="isOpen = true"
+          @focus="onFocus"
           variant="outline"
         />
-        <UButton label="Ara" />
+        <UButton label="Ara" @click="isOpen = true" />
       </UButtonGroup>
     </UContainer>
   </section>

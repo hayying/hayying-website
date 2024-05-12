@@ -36,6 +36,7 @@ const links = useState("links", () => [
 const buttonClass = "text-white hover:text-gray-100";
 const userStore = useUserStore();
 const isAuthenticated = computed(() => userStore.isAuthenticated);
+const searchIsOpen = useState("search");
 const isOpen = ref(false);
 
 onMounted(() => {
@@ -98,7 +99,13 @@ onMounted(() => {
       >
         <UButton :class="buttonClass" icon="bx:user" variant="link" size="xl" />
       </UDropdown>
-      <UButton :class="buttonClass" icon="la:search" variant="link" size="xl" />
+      <UButton
+        :class="buttonClass"
+        icon="la:search"
+        variant="link"
+        size="xl"
+        @click="searchIsOpen = true"
+      />
     </div>
     <UButton
       class="rounded-full text-black hidden lg:block"

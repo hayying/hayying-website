@@ -3,4 +3,5 @@
   <slot />
   <WebFooter />
   <WebBasket />
+  <WebSearch />
 </template>
