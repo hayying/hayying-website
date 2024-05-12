@@ -27,7 +27,6 @@ onMounted(() => {
     />
     <UCarousel
       :ui="{
-        item: 'basis-full basis-1/1 md:basis-1/2 lg:basis-1/3 xl:basis-1/5',
         container: 'py-20',
       }"
       class="overflow-hidden"
