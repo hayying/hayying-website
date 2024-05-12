@@ -59,7 +59,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
         </p>
         <UButton
           v-if="products.length > 0"
-          label="Sepete Git"
+          label="Ödeme Yap"
           to="/payment"
           size="lg"
           block

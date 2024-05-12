@@ -8,7 +8,7 @@ const { data }: { data: any } = await useApiFetch("/online-consulting");
 </script>
 <template>
   <WebPageHeader img="/online-counseling.jpg" title="ONLİNE DANIŞMANLIK" />
-  <UContainer class="mt-32">
+  <UContainer class="my-32">
     <MDC :value="data.data.attributes.content" />
   </UContainer>
 </template>

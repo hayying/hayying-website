@@ -15,6 +15,9 @@ export const useBasketStore = defineStore({
     removeProduct(id: number) {
       this.products = this.products.filter((product) => product.id !== id);
     },
+    removeAllProducts() {
+      this.products = [];
+    },
   },
   getters: {
     totalPrice(): number {
