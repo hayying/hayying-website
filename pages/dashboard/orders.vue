@@ -2,6 +2,9 @@
 definePageMeta({
   layout: "dashboard",
 });
+useSeoMeta({
+  title: "Siparişler",
+});
 const userData = useState<any>("userData");
 
 const orders = userData.value.orders.map((order: any) => ({

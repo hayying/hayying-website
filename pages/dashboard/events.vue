@@ -2,6 +2,9 @@
 definePageMeta({
   layout: "dashboard",
 });
+useSeoMeta({
+  title: "Etkinlikler",
+});
 const userData = useState<any>("userData");
 
 const events = userData.value.appliedEvents.map((event: any) => ({

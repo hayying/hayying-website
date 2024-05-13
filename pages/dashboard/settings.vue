@@ -5,7 +5,9 @@ import { z } from "zod";
 definePageMeta({
   layout: "dashboard",
 });
-
+useSeoMeta({
+  title: "Ayarlar",
+});
 const userStore = useUserStore();
 const { add } = useToast();
 const loading = ref(false);
