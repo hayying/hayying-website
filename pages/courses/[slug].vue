@@ -29,6 +29,7 @@ useSeoMeta({
         {{ data.data[0].attributes.title }}
       </h1>
       <MDC :value="data.data[0].attributes.details" class="break-all" />
+      <VideoPlayer :src="data.data[0].attributes.videoURI" />
     </div>
     <UCard :ui="{ body: { base: 'grid gap-3 ', background: 'bg-gray-100' } }">
       <img
