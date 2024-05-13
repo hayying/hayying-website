@@ -10,7 +10,7 @@ const links = useState("links", () => [
   },
   {
     label: "ONLİNE DANIŞMANLIK",
-    to: "/online-counseling",
+    to: "/online-consulting",
   },
   {
     label: "ETKİNLİKLER",
@@ -86,7 +86,7 @@ onMounted(() => {
           [
             {
               label: 'Panel',
-              to: '/dashboard',
+              to: '/dashboard/courses',
               icon: 'carbon:dashboard',
             },
             {

@@ -5,5 +5,5 @@ defineProps({
 </script>
 
 <template>
-  <iframe :src="src" class="w-full h-full" />
+  <iframe :src="src" class="h-[30rem] w-full" />
 </template>

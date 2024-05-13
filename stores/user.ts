@@ -19,7 +19,7 @@ export const useUserStore = defineStore({
     } as User;
   },
   actions: {
-    async login(jwt: string, user: User) {
+    async login(jwt: string, user: User, navigate = true) {
       Object.assign(this, {
         id: user.id,
         firstname: user.firstname,
@@ -32,7 +32,7 @@ export const useUserStore = defineStore({
         tcIdentificationNumber: user.tcIdentificationNumber,
         title: user.title,
       } as User);
-      await navigateTo("/");
+      navigate && (await navigateTo("/"));
     },
     async logout() {
       Object.assign(this, {
