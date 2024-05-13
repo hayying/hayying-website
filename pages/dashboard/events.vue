@@ -30,18 +30,13 @@ const columns = [
 
 <template>
   <UCard :ui="{ background: 'bg-gray-100' }">
-    <UTable :rows="events" :columns="columns">
-      <template #actions-data="{ row }">
-        <UButton
-          :to="`/dashboard/courses/${row.slug}`"
-          icon="material-symbols:chevron-right"
-          label="Kursa Git"
-          variant="link"
-          color="gray"
-          class="p-0"
-          trailing
-        />
-      </template>
-    </UTable>
+    <UTable
+      :rows="events"
+      :columns="columns"
+      :empty-state="{
+        icon: 'i-heroicons-circle-stack-20-solid',
+        label: 'Etkinlik Yok',
+      }"
+    />
   </UCard>
 </template>

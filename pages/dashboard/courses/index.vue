@@ -4,7 +4,7 @@ definePageMeta({
 });
 const userData = useState<any>("userData");
 
-const courses = userData.value.courses.map((course: any) => ({
+const courses = userData?.value?.courses?.map((course: any) => ({
   slug: course.slug,
   ad: course.title,
   açıklama: course.description,
@@ -33,7 +33,14 @@ const columns = [
 
 <template>
   <UCard :ui="{ background: 'bg-gray-100' }">
-    <UTable :rows="courses" :columns="columns">
+    <UTable
+      :rows="courses"
+      :columns="columns"
+      :empty-state="{
+        icon: 'i-heroicons-circle-stack-20-solid',
+        label: 'Kurs Yok',
+      }"
+    >
       <template #actions-data="{ row }">
         <UButton
           :to="`/dashboard/courses/${row.slug}`"

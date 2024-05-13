@@ -10,7 +10,7 @@ const { data: orders }: { data: any } = await useApiFetch("/user/order", {
     Authorization: `Bearer ${jwt}`,
   },
 });
-data.value.orders = orders.value.orders;
+data.value.orders = orders?.value?.orders;
 useState("userData", () => data.value);
 </script>
 

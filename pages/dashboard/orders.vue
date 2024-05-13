@@ -7,7 +7,7 @@ useSeoMeta({
 });
 const userData = useState<any>("userData");
 
-const orders = userData.value.orders.map((order: any) => ({
+const orders = userData.value?.orders?.map((order: any) => ({
   id: order.transactionId,
   fiyat: order.paymentAmount,
   products: order.courses,
@@ -30,7 +30,14 @@ const columns = [
 
 <template>
   <UCard :ui="{ background: 'bg-gray-100' }">
-    <UTable :rows="orders" :columns="columns">
+    <UTable
+      :rows="orders"
+      :columns="columns"
+      :empty-state="{
+        icon: 'i-heroicons-circle-stack-20-solid',
+        label: 'Sipariş Yok',
+      }"
+    >
       <template #actions-data="{ row }">
         <UPopover :popper="{ arrow: true }">
           <UButton label="Ürünler" variant="link" class="p-0" color="gray" />
