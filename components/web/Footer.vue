@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { VerticalNavigationLink } from "#ui/types";
-const socials = [
+const socials = useState("socials", () => [
   {
     icon: "mdi:instagram",
     href: "https://www.instagram.com/hayying.danismanlik?igsh=MTFxaDN3eXZoOXI0eA==",
@@ -17,7 +17,7 @@ const socials = [
     icon: "mdi:telegram",
     href: "https://t.me/hayying",
   },
-];
+]);
 
 const links = useState<VerticalNavigationLink[]>("links");
 

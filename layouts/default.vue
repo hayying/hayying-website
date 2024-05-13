@@ -6,4 +6,5 @@
   <WebFooter />
   <WebBasket />
   <WebSearch />
+  <WebSocials />
 </template>
