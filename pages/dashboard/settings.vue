@@ -12,6 +12,8 @@ const userStore = useUserStore();
 const { add } = useToast();
 const loading = ref(false);
 const passwordLoading = ref(false);
+const diplomaLoading = ref(false);
+const diploma = ref();
 
 const passwordState = reactive({
   password: undefined,
@@ -98,6 +100,9 @@ async function onSubmit(event: any) {
     {
       method: "PUT",
       body: changedFields,
+      headers: {
+        Authorization: `Bearer ${userStore.jwt}`,
+      },
     }
   );
   if (status.value === "error") {
@@ -118,7 +123,14 @@ async function passwordOnSubmit(event: FormSubmitEvent<PasswordSchema>) {
     "/auth/change-password",
     {
       method: "POST",
-      body: event.data,
+      body: {
+        currentPassword: event.data.currentPassword,
+        password: event.data.password,
+        passwordConfirmation: event.data.confirmPassword,
+      },
+      headers: {
+        Authorization: `Bearer ${userStore.jwt}`,
+      },
     }
   );
   if (status.value === "error") {
@@ -127,10 +139,43 @@ async function passwordOnSubmit(event: FormSubmitEvent<PasswordSchema>) {
       description: "Bir hata oluştu",
     });
   } else {
+    add({
+      title: "Başarılı",
+      description: "Parola başarıyla değiştirildi",
+    });
     const { jwt, user } = data.value;
     userStore.login(jwt, user, false);
   }
   loading.value = false;
+}
+
+async function sendDiploma() {
+  diplomaLoading.value = true;
+  const formData = new FormData();
+  formData.append("diploma", diploma.value);
+  const { status }: { data: any; status: any } = await useApiFetch("/user/me", {
+    method: "PUT",
+    body: formData,
+    headers: {
+      Authorization: `Bearer ${userStore.jwt}`,
+    },
+  });
+  if (status.value === "error") {
+    add({
+      title: "Hata",
+      description: "Bir hata oluştu",
+    });
+  } else {
+    add({
+      title: "Başarılı",
+      description: "Diploma başarıyla yüklendi",
+    });
+  }
+  diplomaLoading.value = false;
+}
+
+function saveDiploma(event: any) {
+  diploma.value = event[0];
 }
 </script>
 
@@ -206,5 +251,20 @@ async function passwordOnSubmit(event: FormSubmitEvent<PasswordSchema>) {
         Parolayı Değiştir
       </UButton>
     </UForm>
+    <div>
+      <h1>Diploma</h1>
+      <UInput type="file" @change="saveDiploma" />
+      {{ userStore.diploma }}
+      <UButton
+        class="rounded-full mt-5"
+        :loading="diplomaLoading"
+        @click="sendDiploma"
+        type="submit"
+        size="lg"
+        block
+      >
+        Diplomayı Kaydet
+      </UButton>
+    </div>
   </div>
 </template>

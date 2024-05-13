@@ -71,7 +71,6 @@ async function getIframe() {
   if (data.value) {
     iframeToken.value = data.value.token;
   }
-  console.log(iframeToken.value);
 }
 </script>
 

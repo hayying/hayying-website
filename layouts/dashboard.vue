@@ -11,7 +11,6 @@ const { data: orders }: { data: any } = await useApiFetch("/user/order", {
   },
 });
 data.value.orders = orders.value.orders;
-console.log(data.value);
 useState("userData", () => data.value);
 </script>
 
