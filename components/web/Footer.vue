@@ -26,7 +26,7 @@ const contactClass =
 </script>
 
 <template>
-  <footer class="bg-[#121921] p-7 md:p-32 text-gray-300">
+  <footer class="bg-[#0B2449] p-7 md:p-32 text-gray-300">
     <UContainer>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20">
         <div class="space-y-5 xl:col-span-2">
