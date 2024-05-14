@@ -14,7 +14,7 @@ const config = useRuntimeConfig();
       :src="
         config.public.apiImgUrl + event.attributes.thumbnail.data.attributes.url
       "
-      class="object-cover w-full md:w-[15rem] h-[15rem] md:h-[10rem] scale-105 group-hover:scale-100 transition-transform"
+      class="w-full md:object-fill object-cover md:w-[15rem] h-[15rem] scale-105 group-hover:scale-100 transition-transform"
     />
     <div class="md:px-5 md:py-2">
       <span class="text-gray-400 text-xs">

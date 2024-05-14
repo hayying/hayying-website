@@ -42,7 +42,7 @@ onMounted(() => {
         <div class="relative group overflow-hidden">
           <img
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
-            class="h-[15rem] w-full group-hover:scale-110 transition-all"
+            class="h-[18rem] w-[18rem] group-hover:scale-110 transition-all"
             draggable="false"
           />
           <div

@@ -45,7 +45,7 @@ function setType(value: string) {
     </UContainer>
   </div>
   <UContainer class="my-32">
-    <div class="grid md:grid-cols-3 gap-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
       <NuxtLink
         class="shadow-xl transition-all"
         v-for="item in courses"
@@ -54,7 +54,7 @@ function setType(value: string) {
         <div class="relative group overflow-hidden">
           <img
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
-            class="h-[17rem] w-full group-hover:scale-110 transition-all"
+            class="h-[25rem] w-full md:object-fill object-cover lg:w-[25rem] group-hover:scale-110 transition-all"
             draggable="false"
           />
           <div

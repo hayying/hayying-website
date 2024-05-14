@@ -17,13 +17,13 @@ useSeoMeta({
       v-for="blog in data.data"
       :key="blog.id"
     >
-      <div class="relative group overflow-hidden w-full">
+      <div class="relative group overflow-hidden w-full xl:w-max flex-shrink-0">
         <img
           :src="
             config.public.apiImgUrl +
             blog.attributes.thumbnail.data.attributes.url
           "
-          class="w-full group-hover:scale-110 transition-all"
+          class="w-full xl:w-[30rem] xl:h-[30rem] group-hover:scale-110 transition-all"
           draggable="false"
         />
         <UButton
