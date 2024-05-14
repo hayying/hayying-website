@@ -18,9 +18,9 @@ defineProps<{
       :enter="{ opacity: 1, y: 0, transition: { duration: 1500 } }"
     >
       <div class="w-20 rounded-full h-1 bg-primary-500" />
-      <div class="text-4xl font-bold">
+      <h1 class="text-4xl font-bold text-center">
         {{ title }}
-      </div>
+      </h1>
     </div>
   </div>
 </template>
