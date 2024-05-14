@@ -5,7 +5,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
 
 <template>
   <UPopover
-    class="fixed bottom-10 right-10 z-50"
+    class="fixed bottom-5 right-1 sm:right-5 z-50"
     :popper="{ arrow: true, offsetDistance: 20, placement: 'top-end' }"
   >
     <UChip :text="products.length" position="top-left" size="3xl" color="blue">
