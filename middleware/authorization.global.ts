@@ -6,7 +6,6 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "/dashboard/events",
     "/dashboard/orders",
     "/dashboard/settings",
-    "/online-form",
     "/payment",
   ];
   const alreadyAuth = ["/login", "/register"];

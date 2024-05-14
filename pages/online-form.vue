@@ -14,7 +14,7 @@ const checkboxQuestions = data.value.data.attributes.questions.filter(
   (question: any) => question.__component === "form.question-with-checkbox"
 );
 
-const { jwt } = useUserStore();
+const { jwt, isAuthenticated } = useUserStore();
 const loading = ref(false);
 const { add } = useToast();
 
@@ -54,9 +54,15 @@ function checkboxOnChange(event: any, i: number, option: string) {
 }
 
 async function sendForm() {
+  if (!isAuthenticated) {
+    add({
+      title: "Hata",
+      description: "Form gönderebilmek için giriş yapmalısınız.",
+      color: "red",
+    });
+    return;
+  }
   loading.value = true;
-
-  // control if isrRequired from questions and answer is empty add toast
   for (let i = 0; i < textAreaQuestions.length; i++) {
     if (textAreaQuestions[i].isRequired && !textareaAnswers.value[i].answer) {
       add({
