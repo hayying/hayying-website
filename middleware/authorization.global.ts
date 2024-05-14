@@ -7,6 +7,7 @@ export default defineNuxtRouteMiddleware((to, from) => {
     "/dashboard/orders",
     "/dashboard/settings",
     "/online-form",
+    "/payment",
   ];
   const alreadyAuth = ["/login", "/register"];
   if (needAuth.includes(to.path) && !isAuthenticated) {
