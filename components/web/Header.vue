@@ -17,6 +17,10 @@ const links = useState("links", () => [
     to: "/events",
   },
   {
+    label: "HAKKIMIZDA",
+    to: "/about",
+  },
+  {
     label: "BLOG",
     to: "/blog",
   },
