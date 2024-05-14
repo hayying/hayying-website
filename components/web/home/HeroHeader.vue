@@ -12,7 +12,9 @@ function onFocus(e: any) {
   >
     <div class="bg-primary-800 w-full h-full opacity-50 absolute" />
     <UContainer class="z-10 text-white text-center space-y-4">
-      <h1 class="text-3xl md:text-5xl font-bold">NE ÖĞRENECEKSİNİZ?</h1>
+      <h1 class="text-3xl md:text-5xl font-bold">
+        Her eve bir uzman, her eve bir psikolog
+      </h1>
       <p class="text-xl">
         İş, teknoloji ve kişisel gelişim alanındaki uzmanlığınızı artırın
       </p>
