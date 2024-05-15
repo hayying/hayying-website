@@ -254,7 +254,6 @@ function saveDiploma(event: any) {
     <div>
       <h1>Diploma</h1>
       <UInput type="file" @change="saveDiploma" />
-      {{ userStore.diploma }}
       <UButton
         class="rounded-full mt-5"
         :loading="diplomaLoading"
