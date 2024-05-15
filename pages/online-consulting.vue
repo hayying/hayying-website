@@ -7,7 +7,7 @@ useSeoMeta({
 const { data }: { data: any } = await useApiFetch("/online-consulting");
 </script>
 <template>
-  <WebPageHeader img="/online-counseling.jpg" title="ONLİNE DANIŞMANLIK" />
+  <WebPageHeader img="/online-consulting.jpg" title="ONLİNE DANIŞMANLIK" />
   <UContainer class="my-32">
     <MDC :value="data.data.attributes.content" />
   </UContainer>

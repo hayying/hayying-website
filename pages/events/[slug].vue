@@ -85,10 +85,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <WebPageHeader
-    :title="data.data[0].attributes.title"
-    img="/policy-banner.jpg"
-  />
+  <WebPageHeader :title="data.data[0].attributes.title" img="/events.jpg" />
   <UContainer class="my-32 flex flex-wrap gap-10 md:flex-nowrap justify-center">
     <div class="w-full">
       <h1 class="text-2xl mb-3">

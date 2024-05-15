@@ -22,7 +22,7 @@ function setType(value: string) {
 </script>
 
 <template>
-  <WebPageHeader title="KURSLAR" img="/online-counseling.jpg" />
+  <WebPageHeader title="KURSLAR" img="/banner.jpg" />
   <div class="bg-primary-500 p-3">
     <UContainer>
       <UButtonGroup size="sm" orientation="horizontal">

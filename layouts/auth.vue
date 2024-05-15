@@ -1,9 +1,8 @@
 <script setup lang="ts">
 const { currentRoute } = useRouter();
-const src =
-  currentRoute.value.path === "/login"
-    ? "/home-contact-banner.jpg"
-    : "/register.jpg";
+const src = computed(() =>
+  currentRoute.value.path === "/login" ? "/login.jpg" : "/register.jpg"
+);
 </script>
 
 <template>

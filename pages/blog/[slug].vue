@@ -18,10 +18,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <WebPageHeader
-    :title="data.data[0].attributes.title"
-    img="/policy-banner.jpg"
-  />
+  <WebPageHeader :title="data.data[0].attributes.title" img="/blog.jpg" />
   <UContainer class="my-32">
     <div class="shadow-xl p-7 grid gap-3">
       <img

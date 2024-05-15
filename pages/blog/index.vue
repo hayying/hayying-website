@@ -9,7 +9,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <WebPageHeader title="BLOG" img="/policy-banner.jpg" />
+  <WebPageHeader title="BLOG" img="/blog.jpg" />
   <UContainer class="my-32 grid gap-10">
     <NuxtLink
       class="flex shadow-xl flex-wrap xl:flex-nowrap"

@@ -1,7 +1,5 @@
 <template>
-  <section
-    class="mt-32 bg-fixed bg-[url('/home-contact-banner.jpg')] py-32 bg-cover"
-  >
+  <section class="mt-32 bg-fixed bg-[url('/home-contact.jpg')] py-32 bg-cover">
     <UContainer>
       <div class="bg-[#0B2449] text-white max-w-lg p-12">
         <h1 class="text-2xl mb-2">Lorem ipsum dolor sit amet consectetur</h1>

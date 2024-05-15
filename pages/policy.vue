@@ -23,7 +23,7 @@ useSeoMeta({
 <template>
   <WebPageHeader
     :title="policies.get(query as string)!.toUpperCase()"
-    img="/online-counseling.jpg"
+    :img="policies.get(query as string) === 'Gizlilik ve Kişisel Verileri Koruma Politikası' ? '/kvkk.png' : '/policy.jpg'"
   />
   <UContainer class="my-32">
     <MDC :value="data.data.attributes.policy" />

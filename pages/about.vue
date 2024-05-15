@@ -1,5 +1,5 @@
 <template>
-  <WebPageHeader title="HAKKIMIZDA" img="/home-contact-banner.jpg" />
+  <WebPageHeader title="HAKKIMIZDA" img="/about.jpg" />
   <UContainer class="my-32">
     <h1 class="text-lg font-bold mt-2">BİZ KİMİZ?</h1>
     Hayying Danışmanlık, 2020 yılından bu yana öğrenci ve profesyonellere
