@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const basketStore = useBasketStore();
-const { jwt, firstname, lastname, address } = useUserStore();
+const { jwt, address } = useUserStore();
 const { products } = storeToRefs(basketStore);
 const coupon = reactive({
   code: undefined,
