@@ -2,11 +2,11 @@
   <section class="mt-32 bg-fixed bg-[url('/home-contact.jpg')] py-32 bg-cover">
     <UContainer>
       <div class="bg-[#0B2449] text-white max-w-lg p-12">
-        <h1 class="text-2xl mb-2">Lorem ipsum dolor sit amet consectetur</h1>
+        <h1 class="text-2xl mb-2">BİZE ULAŞIN</h1>
         <p class="text-gray-400 text-sm">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid iure
-          ratione ipsa et, quia hic quis nisi quas odio sit perspiciatis dolores
-          sint neque modi voluptatem iste! Libero, atque quas.
+          Sorunuz, öneriniz ya da geri bildiriminiz varsa veya kurs fırsatları
+          hakkında bilgi almak istiyorsanız, aşağıdaki formu doldurabilirsiniz.
+          Ekip arkadaşlarımız size en kısa sürede dönüş sağlayacaktır.
         </p>
         <UButton
           class="rounded-full ml-auto mt-7"

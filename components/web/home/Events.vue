@@ -8,7 +8,7 @@ const { data }: { data: any } = await useApiFetch(
   <section class="mt-24">
     <WebHomeSectionHeader
       title="En Son Eklenen Etkinlikler"
-      description="En son eklenen etkinlikleri keşfedin"
+      description="Bir Araya Gelmenin, Öğrenmenin ve Eğlenmenin Zaman"
     />
     <UContainer class="grid">
       <div class="grid justify-center lg:grid-cols-2 gap-10 mt-12">

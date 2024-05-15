@@ -32,10 +32,9 @@ const contactClass =
         <div class="space-y-5 xl:col-span-2">
           <Logo />
           <p class="text-xs">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
-            asperiores repellendus esse corporis architecto nobis dolorem
-            dignissimos repudiandae quibusdam praesentium provident expedita
-            accusantium, optio a, nam eum. Aliquid, atque possimus?
+            Hayying Danışmanlık, 2020 yılından bu yana öğrenci ve
+            profesyonellere yönelik kurs ve etkinlikler sunan öncü bir eğitim
+            danışmanlık şirketidir.
           </p>
           <div class="flex items-center flex-wrap gap-3">
             <span class="text-sm text-white"> BİZİ TAKİP EDİN </span>

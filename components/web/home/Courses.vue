@@ -23,7 +23,7 @@ onMounted(() => {
   <section class="mt-32">
     <WebHomeSectionHeader
       title="En Son Eklenen Kurslar"
-      description="En son eklenen kursları keşfedin"
+      description="Uzman Eğitmenlerle Nitelikli Öğrenme Fırsatı"
     />
     <UCarousel
       :ui="{
