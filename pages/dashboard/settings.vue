@@ -95,24 +95,27 @@ async function onSubmit(event: any) {
   if (Object.keys(changedFields).length === 0) {
     return;
   }
-  const { data, status }: { data: any; status: any } = await useApiFetch(
-    "/user/me",
-    {
-      method: "PUT",
-      body: changedFields,
-      headers: {
-        Authorization: `Bearer ${userStore.jwt}`,
-      },
-    }
-  );
+  const { status }: { data: any; status: any } = await useApiFetch("/user/me", {
+    method: "PUT",
+    body: changedFields,
+    headers: {
+      Authorization: `Bearer ${userStore.jwt}`,
+    },
+  });
   if (status.value === "error") {
     add({
       title: "Hata",
       description: "Bir hata oluştu",
     });
   } else {
-    const { jwt, user } = data.value;
-    userStore.login(jwt, user, false);
+    add({
+      title: "Başarılı",
+      description: "Bilgiler başarıyla güncellendi",
+    });
+    Object.keys(changedFields).forEach((key) => {
+      //@ts-ignore
+      userStore[key] = changedFields[key];
+    });
   }
   loading.value = false;
 }
