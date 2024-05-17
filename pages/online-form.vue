@@ -135,7 +135,7 @@ async function sendForm() {
 </script>
 
 <template>
-  <WebPageHeader title="ONLİNE FORM" img="/online-counseling.jpg" />
+  <WebPageHeader title="ONLİNE FORM" img="/banner.jpg" />
   <UContainer class="my-32 space-y-7" :ui="{ constrained: 'max-w-2xl' }">
     <div v-for="(question, i) in textAreaQuestions" :key="question.id">
       <div class="flex items-center gap-2">
