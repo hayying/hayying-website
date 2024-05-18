@@ -136,47 +136,45 @@ async function sendForm() {
 
 <template>
   <WebPageHeader title="ONLİNE FORM" img="/banner.jpg" />
-  <ClientOnly>
-    <UContainer class="my-32 space-y-7" :ui="{ constrained: 'max-w-2xl' }">
-      <div v-for="(question, i) in textAreaQuestions" :key="question.id">
-        <div class="flex items-center gap-2">
-          <span v-if="question.isRequired" class="text-red-500">*</span>
-          <MDC :value="question.question" />
-        </div>
-
-        <UTextarea v-model="textareaAnswers[i].answer" />
+  <UContainer class="my-32 space-y-7" :ui="{ constrained: 'max-w-2xl' }">
+    <div v-for="(question, i) in textAreaQuestions" :key="question.id">
+      <div class="flex items-center gap-2">
+        <span v-if="question.isRequired" class="text-red-500">*</span>
+        <MDC :value="question.question" />
       </div>
-      <div v-for="(question, i) in radioQuestions" :key="question.id">
-        <div class="flex items-center gap-2">
-          <span v-if="question.isRequired" class="text-red-500">*</span>
-          <MDC :value="question.question" />
-        </div>
-        <URadioGroup
-          v-model="radioAnswers[i].answer"
-          :options="question.radioButtonOptions.map((option: any) => ({
+
+      <UTextarea v-model="textareaAnswers[i].answer" />
+    </div>
+    <div v-for="(question, i) in radioQuestions" :key="question.id">
+      <div class="flex items-center gap-2">
+        <span v-if="question.isRequired" class="text-red-500">*</span>
+        <MDC :value="question.question" />
+      </div>
+      <URadioGroup
+        v-model="radioAnswers[i].answer"
+        :options="question.radioButtonOptions.map((option: any) => ({
           label: option.option,
           value: option.option,
         }))"
-        />
-      </div>
-      <div v-for="(question, i) in checkboxQuestions" :key="question.id">
-        <div class="flex items-center gap-2">
-          <span v-if="question.isRequired" class="text-red-500">*</span>
-          <MDC :value="question.question" />
-        </div>
-        <UCheckbox
-          v-for="option in question.checkboxOptions"
-          :label="option.option"
-          @change="checkboxOnChange($event, i, option.option)"
-        />
-      </div>
-      <UButton
-        :loading="loading"
-        @click="sendForm"
-        label="Gönder"
-        size="xl"
-        block
       />
-    </UContainer>
-  </ClientOnly>
+    </div>
+    <div v-for="(question, i) in checkboxQuestions" :key="question.id">
+      <div class="flex items-center gap-2">
+        <span v-if="question.isRequired" class="text-red-500">*</span>
+        <MDC :value="question.question" />
+      </div>
+      <UCheckbox
+        v-for="option in question.checkboxOptions"
+        :label="option.option"
+        @change="checkboxOnChange($event, i, option.option)"
+      />
+    </div>
+    <UButton
+      :loading="loading"
+      @click="sendForm"
+      label="Gönder"
+      size="xl"
+      block
+    />
+  </UContainer>
 </template>
