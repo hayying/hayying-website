@@ -66,12 +66,11 @@ onMounted(() => {
           >
             {{ item.attributes.type }}
           </span>
-          <h1 class="text-lg font-bold text-gray-800">
+          <h1 class="text-lg font-bold text-gray-800 max-w-[245px]">
             {{ item.attributes.title }}
           </h1>
-          <p class="text-gray-500">{{ item.attributes.description }}</p>
+          <p class="text-gray-500 mt-3">{{ item.attributes.description }}</p>
         </div>
-        <UDivider />
       </NuxtLink>
     </UCarousel>
     <UContainer class="flex">

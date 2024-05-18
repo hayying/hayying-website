@@ -54,7 +54,7 @@ function setType(value: string) {
         <div class="relative group overflow-hidden">
           <img
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
-            class="h-[25rem] w-full md:object-fill object-cover lg:w-[25rem] group-hover:scale-110 transition-all"
+            class="h-[25rem] w-full aspect-square group-hover:scale-110 transition-all"
             draggable="false"
           />
           <div
@@ -84,7 +84,6 @@ function setType(value: string) {
           </h1>
           <p class="text-gray-500">{{ item.attributes.description }}</p>
         </div>
-        <UDivider />
       </NuxtLink>
     </div>
   </UContainer>
