@@ -4,13 +4,13 @@ import removeMarkdown from "markdown-to-text";
 const { data }: { data: any } = await useApiFetch(
   "/online-form-page?populate=questions.radioButtonOptions&populate=questions.checkboxOptions"
 );
-const textAreaQuestions = data?.value?.data?.attributes?.questions?.filter(
+const textAreaQuestions = data.value.data.attributes.questions.filter(
   (question: any) => question.__component === "form.question-and-answer-text"
 );
-const radioQuestions = data?.value?.data?.attributes?.questions?.filter(
+const radioQuestions = data.value.data.attributes.questions.filter(
   (question: any) => question.__component === "form.question-and-radio-button"
 );
-const checkboxQuestions = data?.value?.data?.attributes?.questions?.filter(
+const checkboxQuestions = data.value.data.attributes.questions.filter(
   (question: any) => question.__component === "form.question-with-checkbox"
 );
 
@@ -22,22 +22,22 @@ const textareaAnswers = ref<any>([]);
 const checkboxAnswers = ref<any>([]);
 const radioAnswers = ref<any>([]);
 
-textAreaQuestions?.forEach((question: any) => {
-  textareaAnswers?.value?.push({
+textAreaQuestions.forEach((question: any) => {
+  textareaAnswers.value.push({
     question: removeMarkdown(question.question),
     answer: "",
   });
 });
 
-radioQuestions?.forEach((question: any) => {
-  radioAnswers?.value?.push({
+radioQuestions.forEach((question: any) => {
+  radioAnswers.value.push({
     question: removeMarkdown(question.question),
     answer: "",
   });
 });
 
-checkboxQuestions?.forEach((question: any) => {
-  checkboxAnswers?.value?.push({
+checkboxQuestions.forEach((question: any) => {
+  checkboxAnswers.value.push({
     question: removeMarkdown(question.question),
     answers: [],
   });
