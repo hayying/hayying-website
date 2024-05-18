@@ -12,7 +12,7 @@ useSeoMeta({
   <WebPageHeader title="BLOG" img="/blog.jpg" />
   <UContainer class="my-32 grid gap-10">
     <NuxtLink
-      class="flex shadow-xl flex-wrap xl:flex-nowrap"
+      class="flex shadow-xl flex-wrap lg:flex-nowrap"
       :to="`/blog/${blog.attributes.slug}`"
       v-for="blog in data.data"
       :key="blog.id"
@@ -23,7 +23,7 @@ useSeoMeta({
             config.public.apiImgUrl +
             blog.attributes.thumbnail.data.attributes.url
           "
-          class="w-full xl:w-[30rem] xl:h-[30rem] group-hover:scale-110 transition-all"
+          class="w-full h-full lg:max-w-lg group-hover:scale-110 transition-all"
           draggable="false"
         />
         <UButton
@@ -41,13 +41,6 @@ useSeoMeta({
           <p class="text-gray-500 text-sm my-2 break-all">
             {{ blog.attributes.description }}
           </p>
-        </div>
-        <div class="mt-auto mb-3">
-          <UDivider class="my-2" />
-          <span class="text-sm text-gray-400 m-4 xl:m-7">
-            {{ blog.attributes.createdBy.firstname }}
-            {{ blog.attributes.createdBy.lastname }}
-          </span>
         </div>
       </div>
     </NuxtLink>

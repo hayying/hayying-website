@@ -19,11 +19,11 @@ useSeoMeta({
 
 <template>
   <WebPageHeader :title="data.data[0].attributes.title" img="/blog.jpg" />
-  <UContainer class="my-32">
+  <UContainer class="my-32" :ui="{ constrained: 'max-w-5xl' }">
     <div class="shadow-xl p-7 grid gap-3">
       <img
         alt="blog"
-        class="h-96 w-full object-cover"
+        class="h-full w-full"
         :src="
           config.public.apiImgUrl +
           data.data[0].attributes.thumbnail.data.attributes.url
@@ -33,9 +33,7 @@ useSeoMeta({
         {{ data.data[0].attributes.title }}
       </h1>
       <span class="text-gray-500 text-sm">
-        {{ new Date(data.data[0].attributes.createdAt).toLocaleDateString() }} -
-        {{ data.data[0].attributes.createdBy.firstname }}
-        {{ data.data[0].attributes.createdBy.lastname }}
+        {{ new Date(data.data[0].attributes.createdAt).toLocaleDateString() }}
       </span>
       <MDC :value="data.data[0].attributes.content" />
     </div>
