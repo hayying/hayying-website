@@ -109,9 +109,7 @@ async function sendForm() {
   const { status } = await useApiFetch("/online-form", {
     method: "POST",
     body: {
-      data: {
-        onlineForm: answers,
-      },
+      data: { ...answers },
     },
     headers: {
       Authorization: `Bearer ${jwt}`,
