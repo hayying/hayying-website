@@ -33,7 +33,12 @@ const isOpen = useState("dashboardIsOpen", () => false);
   <nav class="p-5 flex-col justify-center items-center hidden lg:flex">
     <UVerticalNavigation
       :links="links"
-      :ui="{ size: 'text-md', icon: { base: 'w-6 h-6' }, base: 'gap-3' }"
+      :ui="{
+        size: 'text-md',
+        icon: { base: 'w-6 h-6' },
+        base: 'gap-3',
+        width: 'w-64',
+      }"
     />
   </nav>
   <USlideover v-model="isOpen" side="left">
