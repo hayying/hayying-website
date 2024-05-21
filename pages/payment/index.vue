@@ -75,7 +75,7 @@ async function getIframe() {
 </script>
 
 <template>
-  <WebPageHeader title="ÖDEME" img="/home-contact-banner.jpg" />
+  <WebPageHeader title="ÖDEME" img="/banner.jpg" />
   <UContainer class="my-32 grid gap-10" v-if="address || false">
     <UModal
       v-model="isOpen"

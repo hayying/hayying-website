@@ -3,7 +3,7 @@ const { currentRoute } = useRouter();
 </script>
 
 <template>
-  <WebPageHeader img="/policy-banner.jpg" title="ÖDEME BAŞARISIZ" />
+  <WebPageHeader img="/banner.jpg" title="ÖDEME BAŞARISIZ" />
   <UContainer class="my-32">
     <p>
       {{ currentRoute.query.transactionId }} numaralı siparişiniz başarısız

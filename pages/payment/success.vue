@@ -5,7 +5,7 @@ removeAllProducts();
 </script>
 
 <template>
-  <WebPageHeader img="/policy-banner.jpg" title="ÖDEME BAŞARILI" />
+  <WebPageHeader img="/banner.jpg" title="ÖDEME BAŞARILI" />
   <UContainer class="my-32">
     <p>
       {{ currentRoute.query.transactionId }} numaralı siparişiniz başarıyla
