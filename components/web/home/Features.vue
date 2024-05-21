@@ -29,8 +29,8 @@ const features = [
 
 <template>
   <UContainer :ui="{ constrained: 'max-w-[100rem]' }">
-    <div class="flex flex-wrap justify-center gap-5 relative bottom-24">
-      <div
+    <section class="flex flex-wrap justify-center gap-5 relative bottom-24">
+      <section
         :class="`bg-${color}-500 p-10 flex flex-col items-center rounded-md px-20`"
         v-for="{ color, image, title, to } in features"
         :key="title"
@@ -47,7 +47,7 @@ const features = [
           size="xl"
           :to="to"
         />
-      </div>
-    </div>
+      </section>
+    </section>
   </UContainer>
 </template>

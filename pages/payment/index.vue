@@ -81,7 +81,7 @@ async function getIframe() {
       v-model="isOpen"
       :ui="{ width: 'w-full sm:max-w-[70rem]', height: 'h-[50rem]' }"
     >
-      <div class="p-4">
+      <section class="p-4">
         <iframe
           :src="`https://www.paytr.com/odeme/${
             type === 'card' ? 'guvenli' : 'api'
@@ -89,34 +89,34 @@ async function getIframe() {
           id="paytriframe"
           class="w-full h-[48rem]"
         />
-      </div>
+      </section>
     </UModal>
     <h1 class="text-2xl">
       {{
         products.length > 0 ? "Ürünler" : "Sepetinizde ürün bulunmamaktadır."
       }}
     </h1>
-    <div class="grid md:grid-cols-2 gap-5">
+    <section class="grid md:grid-cols-2 gap-5">
       <UCard
         :ui="{ body: { base: 'flex gap-3' } }"
         v-for="product in products"
         :key="product.id"
       >
         <NuxtImg :src="product.image" alt="product" class="max-w-xs w-full" />
-        <div>
+        <section>
           <h1 class="text-xl mb-2">{{ product.name }}</h1>
           <span class="text-gray-500">{{ product.price }}₺</span>
-        </div>
+        </section>
       </UCard>
-    </div>
-    <div class="flex justify-between">
+    </section>
+    <section class="flex justify-between">
       <h1 class="text-2xl">
         Toplam fiyat <span v-if="coupon.discount !== 0">(İndirimli)</span>
       </h1>
       <h1 class="text-2xl">
         {{ coupon.discount === 0 ? basketStore.totalPrice : discountPrice }}₺
       </h1>
-    </div>
+    </section>
     <UButtonGroup size="xl" orientation="horizontal">
       <UInput
         variant="outline"

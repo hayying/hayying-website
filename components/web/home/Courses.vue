@@ -39,24 +39,24 @@ onMounted(() => {
         class="mr-10 shadow-xl opacity-50 hover:opacity-100 transition-all hover:scale-105"
         :to="`/courses/${item.attributes.slug}`"
       >
-        <div class="relative group overflow-hidden">
+        <section class="relative group overflow-hidden">
           <NuxtImg
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
             class="h-[18rem] w-[18rem] group-hover:scale-110 transition-all"
             draggable="false"
           />
-          <div
+          <section
             class="absolute bottom-0 left-5 bg-black opacity-70 text-white p-2 py-1"
           >
             {{ item.attributes.price }}₺
-          </div>
+          </section>
           <UButton
             class="absolute hidden group-hover:block left-[50%] bottom-5 transform -translate-x-1/2 top-[50%] -translate-y-1/2 h-max opacity-70 rounded-full"
             label="Detaylar"
             color="gray"
           />
-        </div>
-        <div class="p-5">
+        </section>
+        <section class="p-5">
           <span
             class="text-gray-500 text-sm mb-2"
             :class="{
@@ -70,7 +70,7 @@ onMounted(() => {
             {{ item.attributes.title }}
           </h1>
           <p class="text-gray-500 mt-3">{{ item.attributes.description }}</p>
-        </div>
+        </section>
       </NuxtLink>
     </UCarousel>
     <UContainer class="flex">

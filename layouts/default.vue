@@ -1,8 +1,8 @@
 <template>
   <WebHeader />
-  <div class="min-h-screen">
+  <section class="min-h-screen">
     <slot />
-  </div>
+  </section>
   <WebFooter />
   <WebBasket />
   <WebSearch />

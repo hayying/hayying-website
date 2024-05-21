@@ -11,9 +11,9 @@ const { data }: { data: any } = await useApiFetch(
       description="Bir Araya Gelmenin, Öğrenmenin ve Eğlenmenin Zaman"
     />
     <UContainer class="grid">
-      <div class="grid justify-center lg:grid-cols-2 gap-10 mt-12">
+      <section class="grid justify-center lg:grid-cols-2 gap-10 mt-12">
         <WebEvent v-for="event in data.data" :key="event.id" :event="event" />
-      </div>
+      </section>
       <UContainer class="flex w-full">
         <UButton
           class="rounded-full ml-auto mt-5"

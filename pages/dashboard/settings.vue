@@ -183,7 +183,7 @@ function saveDiploma(event: any) {
 </script>
 
 <template>
-  <div class="space-y-5 grid max-w-xl m-auto gap-10">
+  <section class="space-y-5 grid max-w-xl m-auto gap-10">
     <UForm
       @submit="onSubmit"
       class="grid gap-4"
@@ -254,7 +254,7 @@ function saveDiploma(event: any) {
         Parolayı Değiştir
       </UButton>
     </UForm>
-    <div>
+    <section>
       <h1>Diploma</h1>
       <UInput type="file" @change="saveDiploma" />
       <UButton
@@ -267,6 +267,6 @@ function saveDiploma(event: any) {
       >
         Diplomayı Kaydet
       </UButton>
-    </div>
-  </div>
+    </section>
+  </section>
 </template>

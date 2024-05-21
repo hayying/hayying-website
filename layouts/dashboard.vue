@@ -16,10 +16,10 @@ useState("userData", () => data.value);
 
 <template>
   <DashboardHeader />
-  <div class="flex items-start">
+  <section class="flex items-start">
     <DashboardNavbar />
     <main class="p-5 w-full">
       <slot />
     </main>
-  </div>
+  </section>
 </template>

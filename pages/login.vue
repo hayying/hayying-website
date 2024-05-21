@@ -74,7 +74,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <div class="space-y-5">
+  <section class="space-y-5">
     <UButton
       label="Google ile Giriş Yap"
       :disabled="!isReady"
@@ -114,5 +114,5 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <NuxtLink to="/register" class="text-primary-500"> Kayıt ol! </NuxtLink>
       </span>
     </UForm>
-  </div>
+  </section>
 </template>

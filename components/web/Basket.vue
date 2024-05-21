@@ -24,26 +24,26 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
       />
     </UChip>
     <template #panel>
-      <div class="p-4 grid gap-5">
+      <section class="p-4 grid gap-5">
         <p class="text-gray-500" v-if="products.length === 0">
           Sepetinizde ürün bulunmamaktadır.
         </p>
-        <div
+        <section
           v-for="product in products"
           class="grid gap-3"
           :key="product.id"
           v-else
         >
-          <div class="flex items-center justify-between gap-2">
+          <section class="flex items-center justify-between gap-2">
             <NuxtImg
               class="w-16 h-16 object-cover hidden sm:block"
               :src="product.image"
               alt="product"
             />
-            <div class="flex-1 ml-3">
+            <section class="flex-1 ml-3">
               <p class="text-lg">{{ product.name }}</p>
               <p class="text-gray-500">{{ product.price }}₺</p>
-            </div>
+            </section>
             <UButton
               @click="basketStore.removeProduct(product.id)"
               icon="material-symbols:close"
@@ -51,8 +51,8 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
               size="sm"
               class="ml-5"
             />
-          </div>
-        </div>
+          </section>
+        </section>
         <UDivider v-if="products.length > 0" />
         <p class="text-gray-500 text-right" v-if="products.length > 0">
           Toplam: {{ totalPrice }}₺
@@ -64,7 +64,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
           size="lg"
           block
         />
-      </div>
+      </section>
     </template>
   </UPopover>
 </template>

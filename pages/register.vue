@@ -85,7 +85,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <div class="space-y-5">
+  <section class="space-y-5">
     <UForm
       @submit="onSubmit"
       class="grid gap-4"
@@ -144,5 +144,5 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <NuxtLink to="/login" class="text-primary-500"> Giriş Yap! </NuxtLink>
       </span>
     </UForm>
-  </div>
+  </section>
 </template>

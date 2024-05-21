@@ -135,19 +135,19 @@ async function sendForm() {
 <template>
   <WebPageHeader title="ONLİNE FORM" img="/banner.jpg" />
   <UContainer class="my-32 space-y-7" :ui="{ constrained: 'max-w-2xl' }">
-    <div v-for="(question, i) in textAreaQuestions" :key="question.id">
-      <div class="flex items-center gap-2">
+    <section v-for="(question, i) in textAreaQuestions" :key="question.id">
+      <section class="flex items-center gap-2">
         <span v-if="question.isRequired" class="text-red-500">*</span>
         <MDC :value="question.question" />
-      </div>
+      </section>
 
       <UTextarea v-model="textareaAnswers[i].answer" />
-    </div>
-    <div v-for="(question, i) in radioQuestions" :key="question.id">
-      <div class="flex items-center gap-2">
+    </section>
+    <section v-for="(question, i) in radioQuestions" :key="question.id">
+      <section class="flex items-center gap-2">
         <span v-if="question.isRequired" class="text-red-500">*</span>
         <MDC :value="question.question" />
-      </div>
+      </section>
       <URadioGroup
         v-model="radioAnswers[i].answer"
         :options="question.radioButtonOptions.map((option: any) => ({
@@ -155,18 +155,18 @@ async function sendForm() {
           value: option.option,
         }))"
       />
-    </div>
-    <div v-for="(question, i) in checkboxQuestions" :key="question.id">
-      <div class="flex items-center gap-2">
+    </section>
+    <section v-for="(question, i) in checkboxQuestions" :key="question.id">
+      <section class="flex items-center gap-2">
         <span v-if="question.isRequired" class="text-red-500">*</span>
         <MDC :value="question.question" />
-      </div>
+      </section>
       <UCheckbox
         v-for="option in question.checkboxOptions"
         :label="option.option"
         @change="checkboxOnChange($event, i, option.option)"
       />
-    </div>
+    </section>
     <UButton
       :loading="loading"
       @click="sendForm"

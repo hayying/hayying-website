@@ -110,11 +110,11 @@ const features = [
 
 <template>
   <WebPageHeader img="/contact.jpg" title="İLETİŞİM" />
-  <div class="bg-[#0B2449]">
+  <section class="bg-[#0B2449]">
     <UContainer
       class="py-7 text-white flex flex-col gap-10 md:flex-row flex-items-center justify-around"
     >
-      <div
+      <section
         v-for="{ description, icon, title } in features"
         :key="title"
         class="grid place-items-center"
@@ -124,9 +124,9 @@ const features = [
           {{ title }}
         </h1>
         <p class="text-gray-300 max-w-[19rem] text-center">{{ description }}</p>
-      </div>
+      </section>
     </UContainer>
-  </div>
+  </section>
   <UContainer class="my-32">
     <h1 class="text-2xl mb-3">İletişim Formu</h1>
     <p class="text-gray-500 mb-12">Size en kısa sürede dönüş yapaacağız.</p>

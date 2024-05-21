@@ -6,24 +6,24 @@ const src = computed(() =>
 </script>
 
 <template>
-  <div class="flex overflow-hidden relative min-h-screen">
-    <div class="bg-white z-10 w-full md:w-[27rem]">
-      <div
+  <section class="flex overflow-hidden relative min-h-screen">
+    <section class="bg-white z-10 w-full md:w-[27rem]">
+      <section
         class="bg-gradient-to-r from-primary-800 to-primary-600 p-5 grid place-items-center"
       >
         <Logo />
-      </div>
-      <div class="p-12 relative">
+      </section>
+      <section class="p-12 relative">
         <slot />
         <p class="text-center text-gray-400 w-full mt-10">
           © 2024 Hayying Danışmanlık
         </p>
-      </div>
-    </div>
+      </section>
+    </section>
     <NuxtImg
       class="absolute w-full h-full object-cover"
       :src="src"
       alt="auth"
     />
-  </div>
+  </section>
 </template>

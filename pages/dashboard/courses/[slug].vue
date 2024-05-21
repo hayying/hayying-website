@@ -11,7 +11,7 @@ const selectedPaidContent = computed(() => ref(paidContent[0]));
 </script>
 
 <template>
-  <div class="space-y-3">
+  <section class="space-y-3">
     <UCarousel
       :ui="{
         container: 'p-2 flex gap-3',
@@ -52,5 +52,5 @@ const selectedPaidContent = computed(() => ref(paidContent[0]));
       {{ selectedPaidContent.value.title }}
     </h1>
     <MDC :value="selectedPaidContent.value.description" />
-  </div>
+  </section>
 </template>

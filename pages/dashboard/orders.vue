@@ -42,11 +42,11 @@ const columns = [
         <UPopover :popper="{ arrow: true }">
           <UButton label="Ürünler" variant="link" class="p-0" color="gray" />
           <template #panel>
-            <div class="p-4 grid gap-5">
+            <section class="p-4 grid gap-5">
               <h1 v-for="product in row.products">
                 {{ product.title }}
               </h1>
-            </div>
+            </section>
           </template>
         </UPopover>
       </template>

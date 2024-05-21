@@ -16,7 +16,7 @@ const config = useRuntimeConfig();
       "
       class="w-full md:object-fill object-cover md:w-[15rem] h-[15rem] scale-105 group-hover:scale-100 transition-transform"
     />
-    <div class="md:px-5 md:py-2">
+    <section class="md:px-5 md:py-2">
       <span class="text-gray-400 text-xs">
         {{ new Date(event.attributes.startDate).toLocaleDateString() }} -
         {{ new Date(event.attributes.endDate).toLocaleDateString() }}
@@ -28,6 +28,6 @@ const config = useRuntimeConfig();
         :value="event.attributes.description"
         class="text-gray-500 text-sm"
       />
-    </div>
+    </section>
   </NuxtLink>
 </template>

@@ -3,7 +3,7 @@ const isOpen = useState("dashboardIsOpen");
 </script>
 
 <template>
-  <div
+  <section
     class="w-full bg-gradient-to-r from-primary-800 to-primary-600 py-3 px-8 border-b-2 flex justify-between items-center"
   >
     <Logo />
@@ -13,5 +13,5 @@ const isOpen = useState("dashboardIsOpen");
       @click="isOpen = !isOpen"
       size="xl"
     />
-  </div>
+  </section>
 </template>

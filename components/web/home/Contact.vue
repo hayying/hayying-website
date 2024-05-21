@@ -1,7 +1,7 @@
 <template>
   <section class="mt-32 bg-fixed bg-[url('/home-contact.jpg')] py-32 bg-cover">
     <UContainer>
-      <div class="bg-[#0B2449] text-white max-w-lg p-12">
+      <section class="bg-[#0B2449] text-white max-w-lg p-12">
         <h1 class="text-2xl mb-2">BİZE ULAŞIN</h1>
         <p class="text-gray-400 text-sm">
           Sorunuz, öneriniz ya da geri bildiriminiz varsa veya kurs fırsatları
@@ -14,7 +14,7 @@
           to="/contact"
           size="xl"
         />
-      </div>
+      </section>
     </UContainer>
   </section>
 </template>

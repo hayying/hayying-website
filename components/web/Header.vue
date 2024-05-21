@@ -66,7 +66,7 @@ onMounted(() => {
       size="xl"
     />
     <Logo />
-    <div class="lg:mr-3 lg:ml-auto flex items-center">
+    <section class="lg:mr-3 lg:ml-auto flex items-center">
       <UHorizontalNavigation
         :links="links"
         class="hidden lg:block"
@@ -110,7 +110,7 @@ onMounted(() => {
         size="xl"
         @click="searchIsOpen = true"
       />
-    </div>
+    </section>
     <UButton
       class="rounded-full text-black hidden lg:block"
       label="ONLİNE FORM"
@@ -118,7 +118,7 @@ onMounted(() => {
       size="lg"
     />
     <USlideover v-model="isOpen" side="left">
-      <div class="p-4 flex-1">
+      <section class="p-4 flex-1">
         <UButton
           class="text-black ml-auto block mb-3"
           icon="iconamoon:close"
@@ -137,7 +137,7 @@ onMounted(() => {
           ]"
           class="text-white"
         />
-      </div>
+      </section>
     </USlideover>
   </header>
 </template>

@@ -21,7 +21,7 @@ useSeoMeta({
 <template>
   <WebPageHeader :title="data.data[0].attributes.title" img="/banner.jpg" />
   <UContainer class="my-32 flex flex-wrap gap-10 md:flex-nowrap justify-center">
-    <div class="w-full">
+    <section class="w-full">
       <h1 class="text-2xl mb-3">
         {{ data.data[0].attributes.title }}
       </h1>
@@ -30,7 +30,7 @@ useSeoMeta({
         :src="data.data[0].attributes.videoURI"
         v-if="data.data[0].attributes.videoURI"
       />
-    </div>
+    </section>
     <UCard
       :ui="{ body: { base: 'grid gap-3 ', background: 'bg-gray-100' } }"
       class="h-max"
@@ -40,7 +40,7 @@ useSeoMeta({
         class="md:max-w-md md:w-[25rem] h-[25rem] w-full"
         :src="config.public.apiImgUrl + data.data[0].attributes.thumbnail.url"
       />
-      <div class="flex items-end justify-between mt-3">
+      <section class="flex items-end justify-between mt-3">
         <span class="text-3xl" v-if="data.data[0].attributes.price !== 0"
           >{{ data.data[0].attributes.price }}₺</span
         >
@@ -54,7 +54,7 @@ useSeoMeta({
         >
           {{ data.data[0].attributes.type.toUpperCase() }}
         </span>
-      </div>
+      </section>
       <UButton
         v-if="data.data[0].attributes.price !== 0"
         :disabled="alreadyAdded(data.data[0].id)"

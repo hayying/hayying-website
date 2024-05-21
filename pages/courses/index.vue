@@ -23,7 +23,7 @@ function setType(value: string) {
 
 <template>
   <WebPageHeader title="KURSLAR" img="/banner.jpg" />
-  <div class="bg-primary-500 p-3">
+  <section class="bg-primary-500 p-3">
     <UContainer>
       <UButtonGroup size="sm" orientation="horizontal">
         <UButton
@@ -43,33 +43,33 @@ function setType(value: string) {
         />
       </UButtonGroup>
     </UContainer>
-  </div>
+  </section>
   <UContainer class="my-32">
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
       <NuxtLink
         class="shadow-xl transition-all"
         v-for="item in courses"
         :to="`/courses/${item.attributes.slug}`"
       >
-        <div class="relative group overflow-hidden">
+        <section class="relative group overflow-hidden">
           <NuxtImg
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
             class="h-[25rem] w-full aspect-square group-hover:scale-110 transition-all"
             draggable="false"
           />
-          <div
+          <section
             v-if="item.attributes.price !== 0"
             class="absolute bottom-0 left-5 bg-black opacity-70 text-white p-2 py-1"
           >
             {{ item.attributes.price }}₺
-          </div>
+          </section>
           <UButton
             class="absolute hidden group-hover:block left-[50%] bottom-5 transform -translate-x-1/2 top-[50%] -translate-y-1/2 h-max opacity-70 rounded-full"
             label="Detaylar"
             color="gray"
           />
-        </div>
-        <div class="p-5">
+        </section>
+        <section class="p-5">
           <span
             class="text-gray-500 text-sm mb-2"
             :class="{
@@ -83,8 +83,8 @@ function setType(value: string) {
             {{ item.attributes.title }}
           </h1>
           <p class="text-gray-500">{{ item.attributes.description }}</p>
-        </div>
+        </section>
       </NuxtLink>
-    </div>
+    </section>
   </UContainer>
 </template>

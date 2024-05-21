@@ -10,7 +10,7 @@ function onFocus(e: any) {
   <section
     class="bg-[url('/home.webp')] bg-cover h-[40rem] bg-center grid place-items-center relative"
   >
-    <div class="bg-primary-800 w-full h-full opacity-50 absolute" />
+    <section class="bg-primary-800 w-full h-full opacity-50 absolute" />
     <UContainer class="z-10 text-white text-center space-y-4">
       <h1 class="text-3xl md:text-5xl font-bold">
         Her Eve Bir Uzman, Her Eve Bir Psikolog

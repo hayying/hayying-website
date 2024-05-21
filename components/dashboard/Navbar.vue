@@ -37,7 +37,7 @@ const isOpen = useState("dashboardIsOpen", () => false);
     />
   </nav>
   <USlideover v-model="isOpen" side="left">
-    <div class="p-4 flex-1">
+    <section class="p-4 flex-1">
       <UButton
         class="text-black ml-auto block mb-3"
         icon="iconamoon:close"
@@ -46,6 +46,6 @@ const isOpen = useState("dashboardIsOpen", () => false);
         size="xl"
       />
       <UVerticalNavigation :links="links" class="text-white" />
-    </div>
+    </section>
   </USlideover>
 </template>

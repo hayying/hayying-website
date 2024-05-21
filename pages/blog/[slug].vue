@@ -20,7 +20,7 @@ useSeoMeta({
 <template>
   <WebPageHeader :title="data.data[0].attributes.title" img="/blog.jpg" />
   <UContainer class="my-32" :ui="{ constrained: 'max-w-5xl' }">
-    <div class="shadow-xl p-7 grid gap-3">
+    <section class="shadow-xl p-7 grid gap-3">
       <NuxtImg
         alt="blog"
         class="h-full w-full"
@@ -36,6 +36,6 @@ useSeoMeta({
         {{ new Date(data.data[0].attributes.createdAt).toLocaleDateString() }}
       </span>
       <MDC :value="data.data[0].attributes.content" />
-    </div>
+    </section>
   </UContainer>
 </template>

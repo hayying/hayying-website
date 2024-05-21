@@ -17,7 +17,9 @@ useSeoMeta({
       v-for="blog in data.data"
       :key="blog.id"
     >
-      <div class="relative group overflow-hidden w-full xl:w-max flex-shrink-0">
+      <section
+        class="relative group overflow-hidden w-full xl:w-max flex-shrink-0"
+      >
         <NuxtImg
           :src="
             config.public.apiImgUrl +
@@ -31,9 +33,9 @@ useSeoMeta({
           label="Detaylar"
           color="gray"
         />
-      </div>
-      <div class="w-full flex flex-col">
-        <div class="p-4 xl:p-7 flex flex-col overflow-auto h-64">
+      </section>
+      <section class="w-full flex flex-col">
+        <section class="p-4 xl:p-7 flex flex-col overflow-auto h-64">
           <span class="text-gray-500 text-sm">
             {{ new Date(blog.attributes.createdAt).toLocaleDateString() }}
           </span>
@@ -41,8 +43,8 @@ useSeoMeta({
           <p class="text-gray-500 text-sm my-2 break-all">
             {{ blog.attributes.description }}
           </p>
-        </div>
-      </div>
+        </section>
+      </section>
     </NuxtLink>
   </UContainer>
 </template>

@@ -87,12 +87,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 <template>
   <WebPageHeader :title="data.data[0].attributes.title" img="/events.jpg" />
   <UContainer class="my-32 flex flex-wrap gap-10 md:flex-nowrap justify-center">
-    <div class="w-full">
+    <section class="w-full">
       <h1 class="text-2xl mb-3">
         {{ data.data[0].attributes.title }}
       </h1>
       <MDC :value="data.data[0].attributes.description" class="break-all" />
-    </div>
+    </section>
     <UCard :ui="{ body: { base: 'grid gap-5', background: 'bg-gray-100' } }">
       <NuxtImg
         alt="blog"
@@ -113,7 +113,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         @click="isAuthenticated ? (isOpen = true) : navigateTo('/login')"
       />
       <UModal v-model="isOpen">
-        <div class="p-10 grid">
+        <section class="p-10 grid">
           <UButton
             @click="isOpen = false"
             icon="icon-park-outline:close"
@@ -144,7 +144,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
               Başvur
             </UButton>
           </UForm>
-        </div>
+        </section>
       </UModal>
     </UCard>
   </UContainer>

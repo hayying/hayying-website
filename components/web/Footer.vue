@@ -28,15 +28,15 @@ const contactClass =
 <template>
   <footer class="bg-[#0B2449] p-7 md:p-32 text-gray-300">
     <UContainer>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20">
-        <div class="space-y-5 xl:col-span-2">
+      <section class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20">
+        <section class="space-y-5 xl:col-span-2">
           <Logo />
           <p class="text-xs">
             Hayying Danışmanlık, 2020 yılından bu yana öğrenci ve
             profesyonellere yönelik kurs ve etkinlikler sunan öncü bir eğitim
             danışmanlık şirketidir.
           </p>
-          <div class="flex items-center flex-wrap gap-3">
+          <section class="flex items-center flex-wrap gap-3">
             <span class="text-sm text-white"> BİZİ TAKİP EDİN </span>
             <UButton
               color="white"
@@ -46,9 +46,9 @@ const contactClass =
               :icon="social.icon"
               :to="social.href"
             />
-          </div>
-        </div>
-        <div class="grid">
+          </section>
+        </section>
+        <section class="grid">
           <h1 class="text-lg text-white mb-5">Hızlı Erişim</h1>
           <UButton
             v-for="link in links"
@@ -60,8 +60,8 @@ const contactClass =
             color="white"
             :to="link.to"
           />
-        </div>
-        <div class="flex flex-col">
+        </section>
+        <section class="flex flex-col">
           <h1 class="text-lg text-white mb-5">Bizimle İletişime Geçin</h1>
           <NuxtLink to="tel:0216302004" :class="contactClass">
             <UIcon name="mdi:phone" size="20" />
@@ -71,10 +71,10 @@ const contactClass =
             <UIcon name="mdi:email" size="20" />
             info@hayying.com
           </NuxtLink>
-        </div>
-      </div>
+        </section>
+      </section>
       <UDivider class="my-7" :ui="{ border: { base: 'border-gray-800' } }" />
-      <div class="text-xs grid items-center md:flex gap-3">
+      <section class="text-xs grid items-center md:flex gap-3">
         <NuxtLink
           to="/policy?value=membership-agreement-and-terms-of-use"
           external
@@ -98,7 +98,7 @@ const contactClass =
           >Çerez Politikası
         </NuxtLink>
         <span class="md:ml-auto">© 2024 Hayying Danışmanlık</span>
-      </div>
+      </section>
     </UContainer>
   </footer>
 </template>
