@@ -1,4 +1,14 @@
+import { vite as vidstack } from "vidstack/plugins";
+
 export default defineNuxtConfig({
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => tag.startsWith("media-"),
+    },
+  },
+  vite: {
+    plugins: [vidstack()],
+  },
   modules: [
     "@nuxt/ui",
     "@nuxtjs/seo",
@@ -8,7 +18,7 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/mdc",
     "nuxt-vue3-google-signin",
-    "@nuxt/image"
+    "@nuxt/image",
   ],
   site: {
     url: "https://hayying.com",
