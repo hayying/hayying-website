@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@pinia-plugin-persistedstate/nuxt",
     "@nuxtjs/mdc",
     "nuxt-vue3-google-signin",
+    "@nuxt/image"
   ],
   site: {
     url: "https://hayying.com",
