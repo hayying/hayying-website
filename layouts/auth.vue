@@ -20,6 +20,10 @@ const src = computed(() =>
         </p>
       </div>
     </div>
-    <img class="absolute w-full h-full object-cover" :src="src" alt="auth" />
+    <NuxtImg
+      class="absolute w-full h-full object-cover"
+      :src="src"
+      alt="auth"
+    />
   </div>
 </template>

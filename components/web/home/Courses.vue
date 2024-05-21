@@ -40,7 +40,7 @@ onMounted(() => {
         :to="`/courses/${item.attributes.slug}`"
       >
         <div class="relative group overflow-hidden">
-          <img
+          <NuxtImg
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
             class="h-[18rem] w-[18rem] group-hover:scale-110 transition-all"
             draggable="false"

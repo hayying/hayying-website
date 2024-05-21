@@ -94,7 +94,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <MDC :value="data.data[0].attributes.description" class="break-all" />
     </div>
     <UCard :ui="{ body: { base: 'grid gap-5', background: 'bg-gray-100' } }">
-      <img
+      <NuxtImg
         alt="blog"
         class="md:max-w-md md:w-auto w-full object-cover"
         :src="

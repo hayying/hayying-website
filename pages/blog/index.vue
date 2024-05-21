@@ -18,7 +18,7 @@ useSeoMeta({
       :key="blog.id"
     >
       <div class="relative group overflow-hidden w-full xl:w-max flex-shrink-0">
-        <img
+        <NuxtImg
           :src="
             config.public.apiImgUrl +
             blog.attributes.thumbnail.data.attributes.url

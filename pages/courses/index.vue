@@ -52,7 +52,7 @@ function setType(value: string) {
         :to="`/courses/${item.attributes.slug}`"
       >
         <div class="relative group overflow-hidden">
-          <img
+          <NuxtImg
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
             class="h-[25rem] w-full aspect-square group-hover:scale-110 transition-all"
             draggable="false"

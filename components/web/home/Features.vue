@@ -35,7 +35,7 @@ const features = [
         v-for="{ color, image, title, to } in features"
         :key="title"
       >
-        <img :src="image" alt="feature" class="w-32 h-32" />
+        <NuxtImg :src="image" alt="feature" class="w-32 h-32" />
         <h1 class="text-2xl text-white">
           {{ title }}
         </h1>

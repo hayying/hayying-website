@@ -35,7 +35,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
           v-else
         >
           <div class="flex items-center justify-between gap-2">
-            <img
+            <NuxtImg
               class="w-16 h-16 object-cover hidden sm:block"
               :src="product.image"
               alt="product"
