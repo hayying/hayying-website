@@ -45,16 +45,16 @@ function setType(value: string) {
     </UContainer>
   </section>
   <UContainer class="my-32">
-    <section class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <section class="flex flex-wrap gap-10 justify-center">
       <NuxtLink
-        class="shadow-xl transition-all"
+        class="shadow-xl transition-all max-w-[23rem]"
         v-for="item in courses"
         :to="`/courses/${item.attributes.slug}`"
       >
         <section class="relative group overflow-hidden">
           <NuxtImg
             :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
-            class="h-[25rem] w-full aspect-square group-hover:scale-110 transition-all"
+            class="aspect-square group-hover:scale-110 transition-all"
             draggable="false"
           />
           <section
