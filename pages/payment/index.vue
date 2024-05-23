@@ -96,13 +96,17 @@ async function getIframe() {
         products.length > 0 ? "Ürünler" : "Sepetinizde ürün bulunmamaktadır."
       }}
     </h1>
-    <section class="grid md:grid-cols-2 gap-5">
+    <section class="grid xl:grid-cols-2 gap-5">
       <UCard
         :ui="{ body: { base: 'flex gap-3' } }"
         v-for="product in products"
         :key="product.id"
       >
-        <NuxtImg :src="product.image" alt="product" class="max-w-xs w-full" />
+        <NuxtImg
+          :src="product.image"
+          alt="product"
+          class="max-w-xs w-full hidden sm:block"
+        />
         <section>
           <h1 class="text-xl mb-2">{{ product.name }}</h1>
           <span class="text-gray-500">{{ product.price }}₺</span>
