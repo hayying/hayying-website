@@ -7,14 +7,14 @@ const config = useRuntimeConfig();
 
 <template>
   <NuxtLink
-    class="flex flex-wrap md:flex-nowrap group overflow-hidden break-all gap-5"
+    class="flex flex-wrap items-start md:flex-nowrap group overflow-hidden break-all gap-5"
     :to="'/events/' + event.attributes.slug"
   >
     <NuxtImg
       :src="
         config.public.apiImgUrl + event.attributes.thumbnail.data.attributes.url
       "
-      class="w-full md:object-fill object-cover md:w-[15rem] h-[15rem] scale-105 group-hover:scale-100 transition-transform"
+      class="w-full max-w-[15rem] scale-105 group-hover:scale-100 transition-transform"
     />
     <section class="md:px-5 md:py-2">
       <span class="text-gray-400 text-xs">
