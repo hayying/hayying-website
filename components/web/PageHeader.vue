@@ -18,7 +18,7 @@ defineProps<{
       :enter="{ opacity: 1, y: 0, transition: { duration: 1500 } }"
     >
       <section class="w-20 rounded-full h-1 bg-primary-500" />
-      <h1 class="text-4xl font-bold text-center">
+      <h1 class="text-xl max-w-7xl md:text-4xl font-bold text-center">
         {{ title }}
       </h1>
     </section>
