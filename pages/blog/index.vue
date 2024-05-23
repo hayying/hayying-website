@@ -20,7 +20,7 @@ useSeoMeta({
       <section
         class="relative group overflow-hidden w-full xl:w-max flex-shrink-0"
       >
-        <NuxtImg
+        <img
           :src="
             config.public.apiImgUrl +
             blog.attributes.thumbnail.data.attributes.url

@@ -35,7 +35,7 @@ useSeoMeta({
       :ui="{ body: { base: 'grid gap-3 ', background: 'bg-gray-100' } }"
       class="h-max"
     >
-      <NuxtImg
+      <img
         alt="blog"
         class="md:max-w-md md:w-[25rem] h-[25rem] w-full"
         :src="config.public.apiImgUrl + data.data[0].attributes.thumbnail.url"

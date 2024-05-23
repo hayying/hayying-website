@@ -9,7 +9,7 @@ defineProps<{
   <section
     class="text-white h-[20rem] md:h-[28rem] bg-center grid place-items-center relative border-b-[5px] border-primary-500"
   >
-    <NuxtImg :src="img" class="w-full h-full object-cover absolute" />
+    <img :src="img" class="w-full h-full object-cover absolute" />
     <section class="bg-primary-800 w-full h-full opacity-50 absolute" />
     <section
       class="z-10 grid place-items-center gap-5"

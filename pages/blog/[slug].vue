@@ -21,7 +21,7 @@ useSeoMeta({
   <WebPageHeader :title="data.data[0].attributes.title" img="/blog.jpg" />
   <UContainer class="my-32" :ui="{ constrained: 'max-w-5xl' }">
     <section class="shadow-xl p-7 grid gap-3">
-      <NuxtImg
+      <img
         alt="blog"
         class="h-full w-full"
         :src="

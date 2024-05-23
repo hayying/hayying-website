@@ -20,10 +20,6 @@ const src = computed(() =>
         </p>
       </section>
     </section>
-    <NuxtImg
-      class="absolute w-full h-full object-cover"
-      :src="src"
-      alt="auth"
-    />
+    <img class="absolute w-full h-full object-cover" :src="src" alt="auth" />
   </section>
 </template>

@@ -10,7 +10,7 @@ const config = useRuntimeConfig();
     class="flex flex-wrap items-start md:flex-nowrap group overflow-hidden break-all gap-5"
     :to="'/events/' + event.attributes.slug"
   >
-    <NuxtImg
+    <img
       :src="
         config.public.apiImgUrl + event.attributes.thumbnail.data.attributes.url
       "

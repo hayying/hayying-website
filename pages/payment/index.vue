@@ -102,7 +102,7 @@ async function getIframe() {
         v-for="product in products"
         :key="product.id"
       >
-        <NuxtImg
+        <img
           :src="product.image"
           alt="product"
           class="max-w-xs w-full hidden sm:block"
