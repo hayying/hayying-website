@@ -152,6 +152,14 @@ async function getIframe() {
     </UButtonGroup>
   </UContainer>
   <UContainer class="my-32" v-else>
-    <p>Ödeme yapabilmeniz için bilgilerinizi tamamlamanız gerekmektedir.</p>
+    <p>
+      Ödeme yapabilmeniz için bilgilerinizi tamamlamanız gerekmektedir.
+      <NuxtLink
+        to="/dashboard/settings"
+        class="text-orange-500 hover:underline"
+      >
+        Bilgilerinizi güncellemek için tıklayınız.
+      </NuxtLink>
+    </p>
   </UContainer>
 </template>
