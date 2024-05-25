@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const basketStore = useBasketStore();
-const { jwt, address } = useUserStore();
+const { jwt, address, phoneNumber } = useUserStore();
 const { products } = storeToRefs(basketStore);
 const coupon = reactive({
   code: undefined,
@@ -76,7 +76,7 @@ async function getIframe() {
 
 <template>
   <WebPageHeader title="ÖDEME" img="/banner.jpg" />
-  <UContainer class="my-32 grid gap-10" v-if="address || false">
+  <UContainer class="my-32 grid gap-10" v-if="address && phoneNumber">
     <UModal
       v-model="isOpen"
       :ui="{ width: 'w-full sm:max-w-[70rem]', height: 'h-[50rem]' }"
