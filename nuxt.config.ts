@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     "@nuxtjs/mdc",
     "nuxt-vue3-google-signin",
     "@nuxt/image",
+    "@tresjs/nuxt",
   ],
   site: {
     url: "https://hayying.com",
