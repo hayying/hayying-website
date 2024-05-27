@@ -9,6 +9,11 @@ onLoop(({ delta, elapsed }) => {
   }
 });
 const isOpen = useState("search");
+
+function onFocus(e: any) {
+  isOpen.value = true;
+  e.target.blur();
+}
 </script>
 
 <template>
@@ -40,10 +45,9 @@ const isOpen = useState("search");
         >
           <UInput
             placeholder="Aramak için tıkla"
-            @focus="$event.target.blur()"
-            @click="isOpen = true"
-            variant="outline"
             class="w-full"
+            @focus="onFocus"
+            variant="outline"
           />
           <UButton label="Ara" @click="isOpen = true" />
         </UButtonGroup>
