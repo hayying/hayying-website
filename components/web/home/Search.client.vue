@@ -12,7 +12,7 @@ const isOpen = useState("search");
 
 function onFocus(e: any) {
   isOpen.value = true;
-  e.target.select();
+  e.target.blur();
 }
 </script>
 
