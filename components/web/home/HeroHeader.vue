@@ -1,35 +1,93 @@
 <script setup lang="ts">
-const isOpen = useState("search");
+const items = [
+  {
+    title: "Kurslar",
+    description: "Kurslarımızı inceleyin. Eğitimlerimize katılın.",
+    href: "/courses",
+    image: "/banner.jpg",
+    button: "Kurslara git",
+  },
+  {
+    title: "Etkinlikler",
+    description: "Etkinliklerimizi inceleyin, katılmak için başvuru yapın.",
+    href: "/events",
+    image: "/events.jpg",
+    button: "Etkinliklere git",
+  },
+  {
+    title: "Blog",
+    description: "Blog yazılarımızı okuyun.",
+    href: "/blog",
+    image: "/blog.jpg",
+    button: "Bloga git",
+  },
+  {
+    title: "Online Form",
+    description: "Size ulaşmamız için formu doldurun.",
+    href: "/online-form",
+    image: "/banner.jpg",
+    button: "Forma git",
+  },
+];
 
-function onFocus(e: any) {
-  e.target.select();
-}
+const carouselRef = ref();
+
+onMounted(() => {
+  setInterval(() => {
+    if (!carouselRef.value) return;
+
+    if (carouselRef.value.page === carouselRef.value.pages) {
+      return carouselRef.value.select(0);
+    }
+
+    carouselRef.value.next();
+  }, 5000);
+});
 </script>
 
 <template>
-  <section
-    class="bg-[url('/home.webp')] bg-cover h-[40rem] bg-center grid place-items-center relative mt-20"
-  >
-    <section class="bg-primary-800 w-full h-full opacity-50 absolute" />
-    <UContainer class="z-10 text-white text-center space-y-4">
-      <h1 class="text-3xl md:text-5xl font-bold">
-        Her Eve Bir Uzman, Her Eve Bir Psikolog
-      </h1>
-      <p class="text-xl">Geleceğinize Yatırım Yapın, Başarıya Ulaşın</p>
-      <UButtonGroup
-        :ui="{ rounded: 'rounded-md' }"
-        orientation="horizontal"
-        size="xl"
+  <section class="mt-[6.3rem]">
+    <UCarousel
+      ref="carouselRef"
+      v-slot="{ item }"
+      arrows
+      :dragable="false"
+      :prev-button="{
+        icon: 'i-heroicons-arrow-left-20-solid',
+      }"
+      :next-button="{
+        icon: 'i-heroicons-arrow-right-20-solid',
+      }"
+      :items="items"
+      :ui="{ item: 'basis-full' }"
+      class="overflow-hidden"
+      indicators
+    >
+      <section
+        class="w-full bg-center bg-cover relative h-full"
+        :style="{ backgroundImage: `url(${item.image})` }"
       >
-        <UInput
-          placeholder="Kurs, doküman, etkinlik ara..."
-          class="sm:w-96 border-b-0"
-          @click="isOpen = true"
-          @focus="onFocus"
-          variant="outline"
+        <div
+          class="absolute w-full h-full bg-gradient-to-r from-black to-transparent"
         />
-        <UButton label="Ara" @click="isOpen = true" />
-      </UButtonGroup>
-    </UContainer>
+        <UContainer
+          class="text-left z-10 py-56 text-white relative"
+          :ui="{ padding: 'px-16 sm:px-20 lg:px-20' }"
+        >
+          <h1 class="text-4xl text-orange-500 mb-2">
+            {{ item.title }}
+          </h1>
+          <p class="mb-10">
+            {{ item.description }}
+          </p>
+          <UButton
+            :label="item.button"
+            size="xl"
+            :to="item.href"
+            trailing-icon="lucide:arrow-right"
+          />
+        </UContainer>
+      </section>
+    </UCarousel>
   </section>
 </template>

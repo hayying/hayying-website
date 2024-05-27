@@ -1,6 +1,6 @@
 <template>
   <WebHomeHeroHeader />
-  <WebHomeFeatures />
+  <WebHomeSearch />
   <WebHomeCourses />
   <WebHomeEvents />
   <WebHomeContact />
