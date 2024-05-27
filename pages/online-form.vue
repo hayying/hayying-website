@@ -143,6 +143,8 @@ async function sendForm() {
 
       <UTextarea v-model="textareaAnswers[i].answer" />
     </section>
+    <!-- Comment 
+      tresjs yukledikten sonra calismamaya basladi
     <section v-for="(question, i) in radioQuestions" :key="question.id">
       <section class="flex items-center gap-2">
         <span v-if="question.isRequired" class="text-red-500">*</span>
@@ -151,11 +153,12 @@ async function sendForm() {
       <URadioGroup
         v-model="radioAnswers[i].answer"
         :options="question.radioButtonOptions.map((option: any) => ({
-          label: option.option,
+          label: option.option, 
           value: option.option,
         }))"
       />
     </section>
+    -->
     <section v-for="(question, i) in checkboxQuestions" :key="question.id">
       <section class="flex items-center gap-2">
         <span v-if="question.isRequired" class="text-red-500">*</span>
