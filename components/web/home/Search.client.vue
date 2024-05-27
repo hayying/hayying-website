@@ -27,7 +27,7 @@ function onFocus(e: any) {
           <br />
           Her Eve Bir Psikolog
         </h1>
-        <p class="mb-10">Geleceğinize yatırım yapın, başarıya ulaşın!</p>
+        <p class="mb-10">Geleceğinize yatırım Yapın, başarıya ulaşın!</p>
         <div class="mb-2 flex gap-2">
           <UBadge label="#kurs" variant="subtle" />
           <UBadge label="#etkinlik" variant="subtle" color="blue" />
