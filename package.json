@@ -15,6 +15,8 @@
     "@nuxtjs/mdc": "^0.7.0",
     "@nuxtjs/seo": "2.0.0-rc.10",
     "@pinia/nuxt": "^0.5.1",
+    "@tresjs/cientos": "^3.9.0",
+    "@tresjs/nuxt": "^2.1.2",
     "@vueuse/motion": "^2.1.0",
     "jwt-decode": "^4.0.0",
     "markdown-to-text": "^0.1.1",
