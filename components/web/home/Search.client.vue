@@ -11,6 +11,7 @@ onLoop(({ delta, elapsed }) => {
 const isOpen = useState("search");
 
 function onFocus(e: any) {
+  isOpen.value = true;
   e.target.select();
 }
 </script>
@@ -44,7 +45,6 @@ function onFocus(e: any) {
         >
           <UInput
             placeholder="Aramak için tıkla"
-            @click="isOpen = true"
             class="w-full"
             @focus="onFocus"
             variant="outline"
