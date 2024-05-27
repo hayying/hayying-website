@@ -8,7 +8,7 @@ function onFocus(e: any) {
 
 <template>
   <section
-    class="bg-[url('/home.webp')] bg-cover h-[40rem] bg-center grid place-items-center relative"
+    class="bg-[url('/home.webp')] bg-cover h-[40rem] bg-center grid place-items-center relative mt-20"
   >
     <section class="bg-primary-800 w-full h-full opacity-50 absolute" />
     <UContainer class="z-10 text-white text-center space-y-4">
