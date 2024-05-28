@@ -45,46 +45,8 @@ function setType(value: string) {
     </UContainer>
   </section>
   <UContainer class="my-32">
-    <section class="flex flex-wrap gap-10 justify-center">
-      <NuxtLink
-        class="shadow-xl transition-all max-w-[23rem]"
-        v-for="item in courses"
-        :to="`/courses/${item.attributes.slug}`"
-      >
-        <section class="relative group overflow-hidden">
-          <img
-            :src="config.public.apiImgUrl + item.attributes.thumbnail.url"
-            class="aspect-square group-hover:scale-110 transition-all"
-            draggable="false"
-          />
-          <section
-            v-if="item.attributes.price !== 0"
-            class="absolute bottom-0 left-5 bg-black opacity-70 text-white p-2 py-1"
-          >
-            {{ item.attributes.price }}₺
-          </section>
-          <UButton
-            class="absolute hidden group-hover:block left-[50%] bottom-5 transform -translate-x-1/2 top-[50%] -translate-y-1/2 h-max opacity-70 rounded-full"
-            label="Detaylar"
-            color="gray"
-          />
-        </section>
-        <section class="p-5">
-          <span
-            class="text-gray-500 text-sm mb-2"
-            :class="{
-              'text-green-500': item.attributes.type === 'online',
-              'text-red-500': item.attributes.type === 'offline',
-            }"
-          >
-            {{ item.attributes.type.toUpperCase() }}
-          </span>
-          <h1 class="text-lg font-bold text-gray-800">
-            {{ item.attributes.title }}
-          </h1>
-          <p class="text-gray-500">{{ item.attributes.description }}</p>
-        </section>
-      </NuxtLink>
+    <section class="flex flex-wrap gap-0 gap-10 justify-center">
+      <WebCourse v-for="item in courses" :key="item.id" :item="item" />
     </section>
   </UContainer>
 </template>
