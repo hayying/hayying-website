@@ -53,7 +53,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     add({
       title: "Şifreniz sıfırlandı!",
     });
-    await navigateTo("/login");
+    await navigateTo("/giris");
   }
   loading.value = false;
 }

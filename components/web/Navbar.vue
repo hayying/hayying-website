@@ -80,7 +80,7 @@ const isOpen = ref(false);
           [
             {
               label: 'Panel',
-              to: '/dashboard/courses',
+              to: '/panel/kurslar',
               icon: 'carbon:dashboard',
             },
             {

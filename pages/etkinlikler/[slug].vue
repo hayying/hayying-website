@@ -110,7 +110,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         label="Başvur"
         block
         size="xl"
-        @click="isAuthenticated ? (isOpen = true) : navigateTo('/login')"
+        @click="isAuthenticated ? (isOpen = true) : navigateTo('/giris')"
       />
       <UModal v-model="isOpen">
         <section class="p-10 grid">

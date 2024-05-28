@@ -46,7 +46,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       title: "E-posta gönderildi!",
       description: "Şifrenizi sıfırlamanız için size e-posta gönderdik.",
     });
-    await navigateTo("/reset-password");
+    await navigateTo("/sifre-sifirla");
   }
   loading.value = false;
 }

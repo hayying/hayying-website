@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const { currentRoute } = useRouter();
 const src = computed(() =>
-  currentRoute.value.path === "/login" ? "/login.jpg" : "/register.jpg"
+  currentRoute.value.path === "/giris" ? "/login.jpg" : "/register.jpg"
 );
 </script>
 

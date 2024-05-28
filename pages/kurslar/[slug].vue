@@ -68,7 +68,7 @@ useSeoMeta({
                 name: data.data[0].attributes.title,
                 price: data.data[0].attributes.price,
               })
-            : navigateTo('/login')
+            : navigateTo('/giris')
         "
         label="Sepete Ekle"
         size="xl"

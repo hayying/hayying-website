@@ -1,16 +1,16 @@
 export default defineNuxtRouteMiddleware((to, from) => {
   const { isAuthenticated } = useUserStore();
   const needAuth = [
-    "/dashboard",
-    "/dashboard/courses",
-    "/dashboard/events",
-    "/dashboard/orders",
-    "/dashboard/settings",
+    "/panel",
+    "/panel/kurslar",
+    "/panel/etkinlikler",
+    "/panel/siparisler",
+    "/panel/ayarlar",
     "/payment",
   ];
-  const alreadyAuth = ["/login", "/register"];
+  const alreadyAuth = ["/giris", "/kaydol"];
   if (needAuth.includes(to.path) && !isAuthenticated) {
-    return navigateTo("/login");
+    return navigateTo("/giris");
   }
   if (alreadyAuth.includes(to.path) && isAuthenticated) {
     return navigateTo("/");

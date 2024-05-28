@@ -97,7 +97,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <UFormGroup name="password">
         <UInput v-model="state.password" type="password" placeholder="Parola" />
       </UFormGroup>
-      <NuxtLink to="/forgot-password" class="text-sm text-primary-500 w-max">
+      <NuxtLink to="/sifremi-unuttum" class="text-sm text-primary-500 w-max">
         Parolanızı mı unuttunuz?
       </NuxtLink>
       <UButton
@@ -111,7 +111,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </UButton>
       <span class="text-center text-sm text-gray-500">
         Henüz hesabınız yok mu?
-        <NuxtLink to="/register" class="text-primary-500"> Kayıt ol! </NuxtLink>
+        <NuxtLink to="/kaydol" class="text-primary-500"> Kayıt ol! </NuxtLink>
       </span>
     </UForm>
   </section>

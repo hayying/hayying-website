@@ -75,7 +75,7 @@ const contactClass =
       <UDivider class="my-7" :ui="{ border: { base: 'border-zinc-700' } }" />
       <section class="text-xs grid items-center md:flex gap-3">
         <NuxtLink
-          to="/policy?value=membership-agreement-and-terms-of-use"
+          to="/yasal?value=membership-agreement-and-terms-of-use"
           external
         >
           Üyelik Sözleşmesi ve Kullanım Koşulları</NuxtLink
