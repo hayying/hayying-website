@@ -8,7 +8,7 @@ const links = useBreadcrumbItems();
 
 <template>
   <section
-    class="text-white h-[20rem] md:h-[28rem] mt-20 bg-center relative ring-2 ring-gray-400"
+    class="text-white h-[20rem] md:h-[28rem] mt-20 bg-center relative ring-2 ring-zinc-800"
   >
     <img :src="img" class="w-full h-full object-cover absolute" />
     <section

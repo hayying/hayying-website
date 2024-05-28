@@ -23,23 +23,23 @@ function setType(value: string) {
 
 <template>
   <WebPageHeader title="KURSLAR" img="/banner.jpg" />
-  <section class="bg-primary-500 p-3">
+  <section class="bg-zinc-950 p-3">
     <UContainer>
-      <UButtonGroup size="sm" orientation="horizontal">
+      <UButtonGroup size="sm" orientation="horizontal" class="dark">
         <UButton
           label="Hepsi"
           @click="setType('all')"
-          :color="type === 'all' ? 'blue' : 'gray'"
+          :color="type === 'all' ? 'orange' : 'gray'"
         />
         <UButton
           label="Online"
           @click="setType('online')"
-          :color="type === 'online' ? 'blue' : 'gray'"
+          :color="type === 'online' ? 'orange' : 'gray'"
         />
         <UButton
           label="Offline"
           @click="setType('offline')"
-          :color="type === 'offline' ? 'blue' : 'gray'"
+          :color="type === 'offline' ? 'orange' : 'gray'"
         />
       </UButtonGroup>
     </UContainer>
