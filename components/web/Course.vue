@@ -8,7 +8,7 @@ defineProps({
 <template>
   <NuxtLink
     class="transition-all hover:scale-105 rounded-xl ring-1 ring-gray-200 overflow-hidden max-w-[20rem]"
-    :to="`/courses/${item.attributes.slug}`"
+    :to="`/kurslar/${item.attributes.slug}`"
   >
     <section class="relative group overflow-hidden">
       <img

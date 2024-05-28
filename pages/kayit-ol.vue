@@ -118,12 +118,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
         <UCheckbox v-model="state.agree">
           <template #label>
             <NuxtLink
-              to="/policy?value=membership-agreement-and-terms-of-use"
+              to="/yasal?value=membership-agreement-and-terms-of-use"
               class="text-primary-500"
               >Üyelik Sözleşmesi ve Kullanım Koşulları</NuxtLink
             >
             ve
-            <NuxtLink to="/policy?value=kvkk" class="text-primary-500"
+            <NuxtLink to="/yasal?value=kvkk" class="text-primary-500"
               >Gizlilik ve Kişisel Verileri Koruma Politikası</NuxtLink
             >
             metinlerini okudum ve kabul ediyorum.
@@ -141,7 +141,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       </UButton>
       <span class="text-center text-sm text-gray-500">
         Hesabınız var mı?
-        <NuxtLink to="/login" class="text-primary-500"> Giriş Yap! </NuxtLink>
+        <NuxtLink to="/giris" class="text-primary-500"> Giriş Yap! </NuxtLink>
       </span>
     </UForm>
   </section>

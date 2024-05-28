@@ -11,7 +11,7 @@
         <UButton
           class="rounded-full ml-auto mt-7"
           label="İletişime Geç"
-          to="/contact"
+          to="/iletisim"
           size="xl"
         />
       </section>

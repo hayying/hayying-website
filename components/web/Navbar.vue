@@ -6,19 +6,19 @@ const links = useState("links", () => [
   },
   {
     label: "KURSLAR",
-    to: "/courses",
+    to: "/kurslar",
   },
   {
     label: "ONLİNE DANIŞMANLIK",
-    to: "/online-consulting",
+    to: "/online-danismanlik",
   },
   {
     label: "ETKİNLİKLER",
-    to: "/events",
+    to: "/etkinlikler",
   },
   {
     label: "HAKKIMIZDA",
-    to: "/about",
+    to: "/hakkimizda",
   },
   {
     label: "BLOG",
@@ -26,7 +26,7 @@ const links = useState("links", () => [
   },
   {
     label: "İLETİŞİM",
-    to: "/contact",
+    to: "/iletisim",
   },
 ]).value.map((link) => {
   return {
@@ -71,7 +71,7 @@ const isOpen = ref(false);
         v-if="!isAuthenticated"
         :class="buttonClass"
         variant="link"
-        to="/login"
+        to="/giris"
         size="xl"
       />
       <UDropdown

@@ -18,7 +18,7 @@ const { data }: { data: any } = await useApiFetch(
         <UButton
           class="rounded-full ml-auto mt-5"
           label="Tüm Etkinlikleri Gör"
-          to="/events"
+          to="/etkinlikler"
           size="xl"
         />
       </UContainer>

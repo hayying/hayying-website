@@ -18,13 +18,13 @@ const groups = [
           id: Math.random(),
           label: value.title,
           suffix: "Kurs",
-          href: `/courses/${value.slug}`,
+          href: `/kurslar/${value.slug}`,
         })),
         ...data.value.events.map((value: any) => ({
           id: Math.random(),
           label: value.title,
           suffix: "Etkinlik",
-          href: `/events/${value.slug}`,
+          href: `/etkinlikler/${value.slug}`,
         })),
       ];
 

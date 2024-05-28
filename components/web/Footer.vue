@@ -86,7 +86,7 @@ const contactClass =
           class="h-5 md:flex hidden"
           orientation="vertical"
         />
-        <NuxtLink to="/policy?value=kvkk" external>
+        <NuxtLink to="/yasal?value=kvkk" external>
           Gizlilik ve Kişisel Verileri Koruma Politikası
         </NuxtLink>
         <UDivider
@@ -94,9 +94,7 @@ const contactClass =
           class="h-5 md:flex hidden"
           orientation="vertical"
         />
-        <NuxtLink to="/policy?value=cookie" external
-          >Çerez Politikası
-        </NuxtLink>
+        <NuxtLink to="/yasal?value=cookie" external>Çerez Politikası </NuxtLink>
         <span class="md:ml-auto">© 2024 Hayying Danışmanlık</span>
       </section>
     </UContainer>

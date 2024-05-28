@@ -43,7 +43,7 @@ const columns = [
     >
       <template #actions-data="{ row }">
         <UButton
-          :to="`/dashboard/courses/${row.slug}`"
+          :to="`/panel/kurslar/${row.slug}`"
           icon="material-symbols:chevron-right"
           label="Kursa Git"
           variant="link"

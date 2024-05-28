@@ -74,7 +74,7 @@ useSeoMeta({
         size="xl"
         block
       />
-      <UButton label="Bilgi Al" to="/contact" block size="xl" v-else />
+      <UButton label="Bilgi Al" to="/iletisim" block size="xl" v-else />
 
       <p class="text-gray-500">
         {{ data.data[0].attributes.description }}

@@ -3,14 +3,14 @@ const items = [
   {
     title: "Kurslar",
     description: "Kurslarımızı inceleyin. Eğitimlerimize katılın.",
-    href: "/courses",
+    href: "/kurslar",
     image: "/banner.jpg",
     button: "Kurslara git",
   },
   {
     title: "Etkinlikler",
     description: "Etkinliklerimizi inceleyin, katılmak için başvuru yapın.",
-    href: "/events",
+    href: "/etkinlikler",
     image: "/events.jpg",
     button: "Etkinliklere git",
   },

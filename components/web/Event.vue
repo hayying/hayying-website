@@ -8,7 +8,7 @@ const config = useRuntimeConfig();
 <template>
   <NuxtLink
     class="flex flex-wrap items-start md:flex-nowrap group overflow-hidden break-all gap-5"
-    :to="'/events/' + event.attributes.slug"
+    :to="'/etkinlikler/' + event.attributes.slug"
   >
     <img
       :src="

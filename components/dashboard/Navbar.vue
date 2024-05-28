@@ -8,25 +8,25 @@ const links = [
   {
     label: "Kurslar",
     icon: "iconoir:book",
-    to: "/dashboard/courses",
+    to: "/panel/kurslar",
   },
   {
     label: "Etkinlikler",
     icon: "uiw:date",
-    to: "/dashboard/events",
+    to: "/panel/etkinlikler",
   },
   {
     label: "Siparişler",
     icon: "iconoir:delivery-truck",
-    to: "/dashboard/orders",
+    to: "/panel/siparisler",
   },
   {
     label: "Hesap Ayarları",
     icon: "material-symbols:settings-outline",
-    to: "/dashboard/settings",
+    to: "/panel/ayarlar",
   },
 ];
-const isOpen = useState("dashboardIsOpen", () => false);
+const isOpen = useState("panelIsOpen", () => false);
 </script>
 
 <template>
