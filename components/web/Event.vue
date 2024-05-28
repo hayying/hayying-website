@@ -7,27 +7,25 @@ const config = useRuntimeConfig();
 
 <template>
   <NuxtLink
-    class="flex flex-wrap items-start md:flex-nowrap group overflow-hidden break-all gap-5"
+    class="grid items-start group hover:bg-gray-100 overflow-hidden break-all gap-5 p-3 rounded-xl max-w-xs transition-all duration-300"
     :to="'/etkinlikler/' + event.attributes.slug"
   >
     <img
       :src="
         config.public.apiImgUrl + event.attributes.thumbnail.data.attributes.url
       "
-      class="w-full max-w-[15rem] scale-105 group-hover:scale-100 transition-transform"
+      class="w-full rounded-xl"
     />
-    <section class="md:px-5 md:py-2">
+    <section>
       <span class="text-gray-400 text-xs">
         {{ new Date(event.attributes.startDate).toLocaleDateString() }} -
         {{ new Date(event.attributes.endDate).toLocaleDateString() }}
       </span>
-      <h1 class="text-xl group-hover:text-primary-500">
+      <h1
+        class="text-xl group-hover:text-primary-500 transition-all duration-300"
+      >
         {{ event.attributes.title }}
       </h1>
-      <MDC
-        :value="event.attributes.description"
-        class="text-gray-500 text-sm"
-      />
     </section>
   </NuxtLink>
 </template>

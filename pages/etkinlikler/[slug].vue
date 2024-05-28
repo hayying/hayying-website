@@ -96,7 +96,7 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     <UCard :ui="{ body: { base: 'grid gap-5', background: 'bg-gray-100' } }">
       <img
         alt="blog"
-        class="md:max-w-md md:w-auto w-full object-cover"
+        class="md:max-w-md md:w-auto w-full object-cover rounded-xl"
         :src="
           config.public.apiImgUrl +
           data.data[0].attributes.thumbnail.data.attributes.url
