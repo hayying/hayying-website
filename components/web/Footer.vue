@@ -26,11 +26,10 @@ const contactClass =
 </script>
 
 <template>
-  <footer class="bg-[#0B2449] p-7 md:p-32 text-gray-300">
+  <footer class="bg-zinc-950 p-7 md:p-32 text-gray-300">
     <UContainer>
       <section class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20">
         <section class="space-y-5 xl:col-span-2">
-          <Logo />
           <p class="text-xs">
             Hayying Danışmanlık, 2020 yılından bu yana öğrenci ve
             profesyonellere yönelik kurs ve etkinlikler sunan öncü bir eğitim
@@ -73,7 +72,7 @@ const contactClass =
           </NuxtLink>
         </section>
       </section>
-      <UDivider class="my-7" :ui="{ border: { base: 'border-gray-800' } }" />
+      <UDivider class="my-7" :ui="{ border: { base: 'border-zinc-700' } }" />
       <section class="text-xs grid items-center md:flex gap-3">
         <NuxtLink
           to="/policy?value=membership-agreement-and-terms-of-use"
