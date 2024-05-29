@@ -110,7 +110,7 @@ const features = [
 
 <template>
   <WebPageHeader img="/contact.jpg" title="İLETİŞİM" />
-  <section class="bg-[#0B2449]">
+  <section class="bg-zinc-950">
     <UContainer
       class="py-7 text-white flex flex-col gap-10 md:flex-row flex-items-center justify-around"
     >
