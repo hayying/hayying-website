@@ -5,14 +5,6 @@ export default defineAppConfig({
     icons: {
       dynamic: true,
     },
-    input: {
-      variant: {
-        none: "border-b-2 border-gray-200 focus:border-primary-500 rounded-none",
-      },
-      default: {
-        variant: "none",
-      },
-    },
     button: {
       padding: {
         "2xs": "px-7 py-1",
