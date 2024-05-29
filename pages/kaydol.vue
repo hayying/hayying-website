@@ -85,37 +85,42 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <section class="space-y-5">
+  <section class="space-y-5 w-full">
+    <h1 class="text-center text-2xl">Hesap Oluştur</h1>
     <UForm
       @submit="onSubmit"
       class="grid gap-4"
       :schema="schema"
       :state="state"
     >
-      <UFormGroup name="email">
-        <UInput v-model="state.email" placeholder="E-posta" />
+      <UFormGroup name="email" label="E-posta">
+        <UInput v-model="state.email" placeholder="ornek@mail.com" />
       </UFormGroup>
-      <UFormGroup name="firstname">
-        <UInput v-model="state.firstname" placeholder="Ad" />
+      <UFormGroup name="firstname" label="Ad">
+        <UInput v-model="state.firstname" placeholder="Adınızı giriniz" />
       </UFormGroup>
-      <UFormGroup name="lastname">
-        <UInput v-model="state.lastname" placeholder="Soyad" />
+      <UFormGroup name="lastname" label="Soyad">
+        <UInput v-model="state.lastname" placeholder="Soyadınızı giriniz" />
       </UFormGroup>
-      <UFormGroup name="phoneNumber">
-        <UInput v-model="state.phoneNumber" placeholder="Telefon Numarası" />
+      <UFormGroup name="phoneNumber" label="Telefon Numarası">
+        <UInput v-model="state.phoneNumber" placeholder="5555555555" />
       </UFormGroup>
-      <UFormGroup name="password">
-        <UInput v-model="state.password" type="password" placeholder="Parola" />
+      <UFormGroup name="password" label="Parola">
+        <UInput
+          v-model="state.password"
+          type="password"
+          placeholder="********"
+        />
       </UFormGroup>
-      <UFormGroup name="confirmPassword">
+      <UFormGroup name="confirmPassword" label="Parola Tekrarı">
         <UInput
           v-model="state.confirmPassword"
           type="password"
-          placeholder="Parola Tekrarı"
+          placeholder="********"
         />
       </UFormGroup>
       <UFormGroup name="agree">
-        <UCheckbox v-model="state.agree">
+        <UCheckbox v-model="state.agree" class="max-w-">
           <template #label>
             <NuxtLink
               to="/yasal?value=membership-agreement-and-terms-of-use"
@@ -139,10 +144,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       >
         Kayıt Ol
       </UButton>
-      <span class="text-center text-sm text-gray-500">
-        Hesabınız var mı?
-        <NuxtLink to="/giris" class="text-primary-500"> Giriş Yap! </NuxtLink>
-      </span>
+      <NuxtLink
+        to="/giris"
+        class="text-lg text-primary-500 absolute top-10 right-10 hover:underline"
+      >
+        Giriş Yap >
+      </NuxtLink>
     </UForm>
   </section>
 </template>

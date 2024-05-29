@@ -6,20 +6,27 @@ const src = computed(() =>
 </script>
 
 <template>
-  <section class="flex overflow-hidden relative min-h-screen">
-    <section class="bg-white z-10 w-full md:w-[27rem]">
-      <section
-        class="bg-gradient-to-r from-primary-800 to-primary-600 p-5 grid place-items-center"
-      >
-        <Logo />
-      </section>
-      <section class="p-12 relative">
-        <slot />
-        <p class="text-center text-gray-400 w-full mt-10">
-          © 2024 Hayying Danışmanlık
-        </p>
-      </section>
+  <section :class="`overflow-hidden min-h-screen`">
+    <img :src="src" class="absolute object-cover w-full h-full" />
+    <section
+      class="absolute flex p-10 w-full h-full bg-gradient-to-r from-black/50 to-transparent"
+    >
+      <Logo />
+      <p class="w-1/3 absolute bottom-10 text-white">
+        Hayying Danışmanlık, 2020 yılından bu yana öğrenci ve profesyonellere
+        yönelik kurs ve etkinlikler sunan öncü bir eğitim danışmanlık
+        şirketidir.
+      </p>
     </section>
-    <img class="absolute w-full h-full object-cover" :src="src" alt="auth" />
+
+    <section
+      class="relative float-end bg-white min-h-screen w-full md:w-1/2 grid place-items-center ring-2 ring-gray-200"
+    >
+      <main
+        class="px-10 py-5 md:max-w-xl flex flex-col gap-8 items-center justify-center w-full"
+      >
+        <slot />
+      </main>
+    </section>
   </section>
 </template>

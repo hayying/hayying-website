@@ -60,7 +60,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm @submit="onSubmit" class="grid gap-4" :schema="schema" :state="state">
+  <UForm
+    @submit="onSubmit"
+    class="grid gap-4 w-full"
+    :schema="schema"
+    :state="state"
+  >
     <h1 class="text-xl mb-5">Şifremi Sıfırla</h1>
     <UFormGroup name="password">
       <UInput v-model="state.password" type="password" placeholder="E-posta" />
@@ -81,5 +86,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     >
       Şifremi Sıfırla
     </UButton>
+    <NuxtLink
+      to="/giris"
+      class="text-lg text-primary-500 absolute top-10 right-10 hover:underline"
+    >
+      Giriş Yap >
+    </NuxtLink>
   </UForm>
 </template>

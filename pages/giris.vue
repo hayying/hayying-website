@@ -74,7 +74,8 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <section class="space-y-5">
+  <section class="space-y-5 w-full">
+    <h1 class="text-center text-2xl">Hoşgeldiniz!</h1>
     <UButton
       label="Google ile Giriş Yap"
       :disabled="!isReady"
@@ -91,11 +92,15 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       :schema="schema"
       :state="state"
     >
-      <UFormGroup name="identifier">
-        <UInput v-model="state.identifier" placeholder="E-posta" />
+      <UFormGroup name="identifier" label="E-posta">
+        <UInput v-model="state.identifier" placeholder="ornek@mail.com" />
       </UFormGroup>
-      <UFormGroup name="password">
-        <UInput v-model="state.password" type="password" placeholder="Parola" />
+      <UFormGroup name="password" label="Parola">
+        <UInput
+          v-model="state.password"
+          type="password"
+          placeholder="********"
+        />
       </UFormGroup>
       <NuxtLink to="/sifremi-unuttum" class="text-sm text-primary-500 w-max">
         Parolanızı mı unuttunuz?
@@ -109,10 +114,12 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       >
         Giriş Yap
       </UButton>
-      <span class="text-center text-sm text-gray-500">
-        Henüz hesabınız yok mu?
-        <NuxtLink to="/kaydol" class="text-primary-500"> Kayıt ol! </NuxtLink>
-      </span>
+      <NuxtLink
+        to="/kaydol"
+        class="text-lg text-primary-500 absolute top-10 right-10 hover:underline"
+      >
+        Kayıt ol >
+      </NuxtLink>
     </UForm>
   </section>
 </template>

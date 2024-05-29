@@ -53,8 +53,13 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
 </script>
 
 <template>
-  <UForm @submit="onSubmit" class="grid gap-4" :schema="schema" :state="state">
-    <h1 class="text-xl mb-5">Şifremi Unuttum</h1>
+  <UForm
+    @submit="onSubmit"
+    class="grid gap-4 text-center w-full"
+    :schema="schema"
+    :state="state"
+  >
+    <h1>Şifremi Unuttum</h1>
     <UFormGroup name="email">
       <UInput v-model="state.email" placeholder="E-posta" />
     </UFormGroup>
@@ -67,5 +72,11 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
     >
       Kod Gönder
     </UButton>
+    <NuxtLink
+      to="/giris"
+      class="text-lg text-primary-500 absolute top-10 right-10 hover:underline"
+    >
+      Giriş Yap >
+    </NuxtLink>
   </UForm>
 </template>
