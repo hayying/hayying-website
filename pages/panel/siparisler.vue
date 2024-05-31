@@ -3,7 +3,7 @@ definePageMeta({
   layout: "dashboard",
 });
 useSeoMeta({
-  title: "Siparişler",
+  description: "Siparişlerinizi buradan görebilirsiniz",
 });
 const userData = useState<any>("userData");
 
@@ -29,27 +29,25 @@ const columns = [
 </script>
 
 <template>
-  <UCard :ui="{ background: 'bg-gray-100' }">
-    <UTable
-      :rows="orders"
-      :columns="columns"
-      :empty-state="{
-        icon: 'i-heroicons-circle-stack-20-solid',
-        label: 'Sipariş Yok',
-      }"
-    >
-      <template #actions-data="{ row }">
-        <UPopover :popper="{ arrow: true }">
-          <UButton label="Ürünler" variant="link" class="p-0" color="gray" />
-          <template #panel>
-            <section class="p-4 grid gap-5">
-              <h1 v-for="product in row.products">
-                {{ product.title }}
-              </h1>
-            </section>
-          </template>
-        </UPopover>
-      </template>
-    </UTable>
-  </UCard>
+  <UTable
+    :rows="orders"
+    :columns="columns"
+    :empty-state="{
+      icon: 'i-heroicons-circle-stack-20-solid',
+      label: 'Sipariş Yok',
+    }"
+  >
+    <template #actions-data="{ row }">
+      <UPopover :popper="{ arrow: true }">
+        <UButton label="Ürünler" variant="link" class="p-0" color="gray" />
+        <template #panel>
+          <section class="p-4 grid gap-5">
+            <h1 v-for="product in row.products">
+              {{ product.title }}
+            </h1>
+          </section>
+        </template>
+      </UPopover>
+    </template>
+  </UTable>
 </template>

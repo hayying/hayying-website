@@ -3,14 +3,14 @@ definePageMeta({
   layout: "dashboard",
 });
 useSeoMeta({
-  title: "Etkinlikler",
+  description: "Başvurduğunuz etkinlikleri buradan görebilirsiniz",
 });
 const userData = useState<any>("userData");
 
 const events = userData.value.appliedEvents.map((event: any) => ({
   ad: event.title,
-  başlangıç: event.startDate,
-  Bitiş: event.endDate,
+  başlangıç: new Date(event.startDate).toLocaleString(),
+  Bitiş: new Date(event.endDate).toLocaleString(),
 }));
 const columns = [
   {
@@ -29,14 +29,12 @@ const columns = [
 </script>
 
 <template>
-  <UCard :ui="{ background: 'bg-gray-100' }">
-    <UTable
-      :rows="events"
-      :columns="columns"
-      :empty-state="{
-        icon: 'i-heroicons-circle-stack-20-solid',
-        label: 'Etkinlik Yok',
-      }"
-    />
-  </UCard>
+  <UTable
+    :rows="events"
+    :columns="columns"
+    :empty-state="{
+      icon: 'i-heroicons-circle-stack-20-solid',
+      label: 'Etkinlik Yok',
+    }"
+  />
 </template>

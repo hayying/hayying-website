@@ -1,56 +1,21 @@
 <script setup lang="ts">
-const links = [
-  {
-    label: "Ana Sayfa",
-    icon: "ion:home-outline",
-    to: "/",
-  },
-  {
-    label: "Kurslar",
-    icon: "iconoir:book",
-    to: "/panel/kurslar",
-  },
-  {
-    label: "Etkinlikler",
-    icon: "uiw:date",
-    to: "/panel/etkinlikler",
-  },
-  {
-    label: "Siparişler",
-    icon: "iconoir:delivery-truck",
-    to: "/panel/siparisler",
-  },
-  {
-    label: "Hesap Ayarları",
-    icon: "material-symbols:settings-outline",
-    to: "/panel/ayarlar",
-  },
-];
-const isOpen = useState("panelIsOpen", () => false);
+const isOpen = useState("dashboardSlideoverIsOpen", () => false);
 </script>
 
 <template>
-  <nav class="p-5 flex-col justify-center items-center hidden lg:flex">
-    <UVerticalNavigation
-      :links="links"
-      :ui="{
-        size: 'text-md',
-        icon: { base: 'w-6 h-6' },
-        base: 'gap-3',
-        width: 'w-64',
-      }"
-    />
+  <nav class="z-50 w-[20rem] hidden lg:flex flex-shrink-0">
+    <DashboardNavbarContent />
   </nav>
-  <USlideover v-model="isOpen" side="left">
+  <USlideover v-model="isOpen">
     <section class="p-4 flex-1">
       <UButton
-        class="text-black ml-auto block mb-3"
+        class="text-black ml-auto block"
         icon="iconamoon:close"
         @click="isOpen = false"
         variant="link"
         size="xl"
       />
-      <UVerticalNavigation :links="links" class="text-white" />
+      <DashboardNavbarContent />
     </section>
   </USlideover>
 </template>

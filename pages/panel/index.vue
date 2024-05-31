@@ -1,5 +1,6 @@
-<template></template>
-
 <script setup lang="ts">
-navigateTo("/dashboard/courses");
+definePageMeta({
+  layout: "dashboard",
+});
+navigateTo("/panel/kurslar");
 </script>

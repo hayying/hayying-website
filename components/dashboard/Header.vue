@@ -1,17 +1,51 @@
 <script setup lang="ts">
-const isOpen = useState("dashboardIsOpen");
+const links = useBreadcrumbItems({
+  hideRoot: true,
+});
+
+const isOpen = useState("dashboardSlideoverIsOpen");
+const metaDescription = ref();
+
+async function updateMetaDescription() {
+  await new Promise((resolve) => setTimeout(resolve, 1));
+  metaDescription.value = document
+    .querySelector('meta[name="description"]')!
+    .getAttribute("content");
+}
+onMounted(() => {
+  updateMetaDescription();
+});
+onBeforeUpdate(() => {
+  updateMetaDescription();
+});
 </script>
 
 <template>
-  <section
-    class="w-full bg-gradient-to-r from-primary-800 to-primary-600 py-3 px-8 border-b-2 flex justify-between items-center"
-  >
-    <Logo />
+  <header class="flex items-center justify-between mb-7">
+    <div>
+      <UBreadcrumb
+        :ui="{
+          li: 'text-black break-all max-w-[300px]',
+          ol: 'flex flex-wrap',
+        }"
+        :links="links"
+      >
+        <template #divider>
+          <UIcon name="mingcute:right-line" />
+        </template>
+      </UBreadcrumb>
+      <p class="text-zinc-500 text-sm">
+        <ClientOnly>
+          {{ metaDescription }}
+        </ClientOnly>
+      </p>
+    </div>
     <UButton
-      class="text-white hover:text-gray-100 block lg:hidden"
-      icon="iconamoon:menu-burger-horizontal-bold"
       @click="isOpen = !isOpen"
-      size="xl"
+      icon="iconamoon:menu-burger-horizontal"
+      size="lg"
+      class="flex lg:hidden"
+      color="gray"
     />
-  </section>
+  </header>
 </template>

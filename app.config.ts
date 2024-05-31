@@ -5,6 +5,11 @@ export default defineAppConfig({
     icons: {
       dynamic: true,
     },
+    table: {
+      td: {
+        base: "",
+      },
+    },
     button: {
       padding: {
         "2xs": "px-7 py-1",

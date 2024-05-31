@@ -6,7 +6,7 @@ definePageMeta({
   layout: "dashboard",
 });
 useSeoMeta({
-  title: "Ayarlar",
+  description: "Hesap ayarlarınızı buradan düzenleyebilirsiniz",
 });
 const userStore = useUserStore();
 const { add } = useToast();
@@ -183,33 +183,33 @@ function saveDiploma(event: any) {
 </script>
 
 <template>
-  <section class="space-y-5 grid max-w-xl m-auto gap-10">
+  <section class="space-y-5 grid max-w-xl gap-10">
     <UForm
       @submit="onSubmit"
       class="grid gap-4"
       :schema="schema"
       :state="state"
     >
-      <UFormGroup name="firstname">
-        <UInput v-model="state.firstname" placeholder="Ad" />
+      <UFormGroup name="firstname" label="Ad">
+        <UInput v-model="state.firstname" placeholder="Adınız" />
       </UFormGroup>
-      <UFormGroup name="lastname">
-        <UInput v-model="state.lastname" placeholder="Soyad" />
+      <UFormGroup name="lastname" label="Soyad">
+        <UInput v-model="state.lastname" placeholder="Soyadınız" />
       </UFormGroup>
-      <UFormGroup name="phoneNumber">
-        <UInput v-model="state.phoneNumber" placeholder="Telefon Numarası" />
+      <UFormGroup name="phoneNumber" label="Telefon Numarası">
+        <UInput v-model="state.phoneNumber" placeholder="5555555555" />
       </UFormGroup>
-      <UFormGroup name="tcIdentificationNumber">
+      <UFormGroup name="tcIdentificationNumber" label="TC Kimlik Numarası">
         <UInput
           v-model="state.tcIdentificationNumber"
-          placeholder="TC Kimlik Numarası"
+          placeholder="44433221100"
         />
       </UFormGroup>
-      <UFormGroup name="title">
-        <UInput v-model="state.title" placeholder="Ünvan" />
+      <UFormGroup name="title" label="Ünvan">
+        <UInput v-model="state.title" placeholder="Ünvanınız" />
       </UFormGroup>
-      <UFormGroup name="address">
-        <UInput v-model="state.address" placeholder="Adres" />
+      <UFormGroup name="address" label="Adres">
+        <UInput v-model="state.address" placeholder="Adresiniz" />
       </UFormGroup>
 
       <UButton
@@ -228,20 +228,20 @@ function saveDiploma(event: any) {
       :schema="passwordSchema"
       :state="passwordState"
     >
-      <UFormGroup name="currentPassword">
+      <UFormGroup name="currentPassword" label="Mevcut Parola">
         <UInput
           v-model="passwordState.currentPassword"
-          placeholder="Mevcut Parola"
+          placeholder="Mevcut Parolanız"
         />
       </UFormGroup>
 
-      <UFormGroup name="password">
-        <UInput v-model="passwordState.password" placeholder="Parola" />
+      <UFormGroup name="password" label="Yeni Parola">
+        <UInput v-model="passwordState.password" placeholder="Yeni parolanız" />
       </UFormGroup>
-      <UFormGroup name="confirmPassword">
+      <UFormGroup name="confirmPassword" label="Yeni Parola Tekrarı">
         <UInput
           v-model="passwordState.confirmPassword"
-          placeholder="Tekrar Parola"
+          placeholder="Tekrar yeni parolanız"
         />
       </UFormGroup>
       <UButton
