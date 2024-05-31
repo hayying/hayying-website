@@ -20,7 +20,7 @@ const src = computed(() =>
     </section>
 
     <section
-      class="relative float-end bg-white min-h-screen w-full md:w-1/2 grid place-items-center ring-2 ring-gray-200"
+      class="relative float-end bg-white dark:bg-black min-h-screen w-full md:w-1/2 grid place-items-center ring-2 ring-gray-200 dark:ring-gray-800"
     >
       <main
         class="px-10 py-5 md:max-w-xl flex flex-col gap-8 items-center justify-center w-full"

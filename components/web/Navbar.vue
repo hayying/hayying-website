@@ -65,6 +65,7 @@ const isOpen = ref(false);
         v-if="!isAuthenticated"
         :class="buttonClass"
         variant="link"
+        color="black"
         to="/giris"
         size="xl"
       />
