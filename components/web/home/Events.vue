@@ -5,23 +5,15 @@ const { data }: { data: any } = await useApiFetch(
 </script>
 
 <template>
-  <section class="mt-24">
+  <UContainer class="grid mt-24">
     <WebHomeSectionHeader
-      title="En Son Eklenen Etkinlikler"
-      description="Bir Araya Gelmenin, Öğrenmenin ve Eğlenmenin Zaman"
+      title="En Yeni Etkinlikler"
+      description="Bir Araya Gelmenin, Öğrenmenin ve Eğlenmenin Zamanı"
+      icon="material-symbols:date-range-outline-rounded"
+      to="/etkinlikler"
     />
-    <UContainer class="grid">
-      <section class="grid justify-center lg:grid-cols-2 gap-10 mt-12">
-        <WebEvent v-for="event in data.data" :key="event.id" :event="event" />
-      </section>
-      <UContainer class="flex w-full">
-        <UButton
-          class="rounded-full ml-auto mt-5"
-          label="Tüm Etkinlikleri Gör"
-          to="/etkinlikler"
-          size="xl"
-        />
-      </UContainer>
-    </UContainer>
-  </section>
+    <section class="grid justify-center lg:grid-cols-2 gap-10 mt-12">
+      <WebEvent v-for="event in data.data" :key="event.id" :event="event" />
+    </section>
+  </UContainer>
 </template>

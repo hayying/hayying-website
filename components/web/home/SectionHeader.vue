@@ -2,25 +2,38 @@
 defineProps({
   title: String,
   description: String,
+  icon: {
+    type: String,
+    required: true,
+  },
+  to: String,
 });
 </script>
 
 <template>
-  <UContainer class="relative">
-    <UDivider class="w-32 m-auto" :ui="{ border: { base: 'border-2' } }" />
-    <UDivider
-      class="w-16 absolute -top-[.01rem] left-1/2 transform -translate-x-1/2"
-      :ui="{
-        border: {
-          base: 'border-primary-500 dark:border-primary-500 border-2 ',
-        },
-      }"
-    />
-    <h1 class="text-center text-2xl font-bold mt-5">
-      {{ title }}
-    </h1>
-    <p class="text-center text-gray-500 dark:text-gray-400 mt-2">
-      {{ description }}
-    </p>
-  </UContainer>
+  <section class="flex flex-wrap md:flex-nowrap items-center gap-4">
+    <section
+      class="p-0.5 rounded-[.6rem] bg-gradient-to-tr from-orange-500 to-transparent"
+    >
+      <section class="rounded-lg bg-gray-100 dark:bg-black">
+        <UIcon :name="icon" class="text-3xl m-2.5" />
+      </section>
+    </section>
+    <section class="flex flex-wrap gap-3 items-center justify-between w-full">
+      <section>
+        <h1 class="text-xl font-semibold">
+          {{ title }}
+        </h1>
+        <p class="text-gray-500 dark:text-gray-400">
+          {{ description }}
+        </p>
+      </section>
+      <UButton
+        trailing-icon="tabler:chevron-right"
+        label="Daha fazla"
+        :to="to"
+        size="lg"
+      />
+    </section>
+  </section>
 </template>

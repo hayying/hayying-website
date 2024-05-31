@@ -45,7 +45,7 @@ function setType(value: string) {
     </UContainer>
   </section>
   <UContainer class="my-32">
-    <section class="flex flex-wrap gap-0 gap-10 justify-center">
+    <section class="flex flex-wrap gap-5 justify-center">
       <WebCourse v-for="item in courses" :key="item.id" :item="item" />
     </section>
   </UContainer>
