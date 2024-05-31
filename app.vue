@@ -16,5 +16,5 @@ useHead({
     <NuxtPage />
   </NuxtLayout>
   <UNotifications />
-  <NuxtLoadingIndicator color="orange" />
+  <NuxtLoadingIndicator color="black" />
 </template>
