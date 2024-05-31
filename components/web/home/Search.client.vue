@@ -17,7 +17,7 @@ function onFocus(e: any) {
 <template>
   <UContainer>
     <section
-      class="min-h-[33rem] h-full px-2 md:px-10 mt-32 grid lg:grid-cols-2 bg-gradient-to-tl from-zinc-800 to-black rounded-3xl items-center"
+      class="min-h-[33rem] shadow-xl h-full px-2 md:px-10 mt-32 grid lg:grid-cols-2 bg-gradient-to-tl from-zinc-800 to-black rounded-3xl items-center"
     >
       <section class="text-white p-5 lg:p-10 dark">
         <h1 class="text-4xl mb-3">
@@ -63,5 +63,6 @@ function onFocus(e: any) {
         </TresCanvas>
       </section>
     </section>
+    <WebHomeStats />
   </UContainer>
 </template>
