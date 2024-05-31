@@ -20,13 +20,22 @@ const socials = useState("socials", () => [
 ]);
 
 const links = useState<VerticalNavigationLink[]>("links");
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
 
 const contactClass =
   "flex transition-all items-center gap-3 text-sm hover:text-primary-500 text-xs mb-3";
 </script>
 
 <template>
-  <footer class="bg-zinc-950 p-7 md:p-32 text-gray-300">
+  <footer class="bg-zinc-950 p-7 md:p-32 text-gray-300 relative">
+    <UButton
+      class="absolute -right-0 -top-10 py-2.5 rounded-none rounded-tl-xl bg-zinc-950 dark:bg-zinc-950 dark:text-white"
+      icon="tabler:chevron-up"
+      @click="scrollToTop"
+      label="Yukarı git"
+    />
     <UContainer>
       <section class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20">
         <section class="space-y-5 xl:col-span-2">
