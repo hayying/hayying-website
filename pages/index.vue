@@ -7,6 +7,7 @@ definePageMeta({
 </script>
 <template>
   <WebHomeHeroHeader />
+  <WebHomeReferences />
   <WebHomeSearch />
   <WebHomeCourses />
   <WebHomeEvents />
