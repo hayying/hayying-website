@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <NuxtLink
-    class="transition-all hover:scale-105 rounded-xl ring-1 ring-gray-200 overflow-hidden max-w-[20rem]"
+    class="transition-all hover:scale-105 rounded-xl ring-1 ring-gray-200 dark:ring-gray-800 dark:bg-black overflow-hidden max-w-[20rem]"
     :to="`/kurslar/${item.attributes.slug}`"
   >
     <section class="relative group overflow-hidden">
@@ -37,7 +37,7 @@ defineProps({
       >
         {{ item.attributes.type }}
       </span>
-      <h1 class="text-lg font-bold text-gray-800 max-w-[245px]">
+      <h1 class="text-lg font-bold max-w-[245px]">
         {{ item.attributes.title }}
       </h1>
       <p class="text-gray-500 mt-3">{{ item.attributes.description }}</p>

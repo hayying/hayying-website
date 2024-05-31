@@ -27,6 +27,15 @@ const links = [
     to: "/panel/ayarlar",
   },
 ];
+const colorMode = useColorMode();
+const isDark = computed({
+  get() {
+    return colorMode.value === "dark";
+  },
+  set() {
+    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+  },
+});
 const items = [
   [
     {
@@ -40,6 +49,14 @@ const items = [
         document.documentElement.requestFullscreen();
       },
     },
+    {
+      label: "Temayı Değiştir",
+      icon: "i-heroicons-moon-20-solid",
+      click: () => {
+        isDark.value = !isDark.value;
+      },
+    },
+
     {
       label: "Çıkış Yap",
       icon: "material-symbols:logout",

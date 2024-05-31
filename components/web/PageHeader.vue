@@ -8,7 +8,7 @@ const links = useBreadcrumbItems();
 
 <template>
   <section
-    class="text-white h-[20rem] md:h-[28rem] mt-20 bg-center relative ring-2 ring-zinc-800"
+    class="text-white h-[20rem] md:h-[28rem] mt-20 bg-center relative ring-2 ring-orange-500"
   >
     <img :src="img" class="w-full h-full object-cover absolute" />
     <section
@@ -17,7 +17,7 @@ const links = useBreadcrumbItems();
     <UContainer class="pt-20 md:pt-44">
       <UBreadcrumb
         :ui="{
-          li: 'text-white',
+          li: 'text-white dark:text-white',
         }"
         :links="links"
       >

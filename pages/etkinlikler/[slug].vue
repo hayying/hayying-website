@@ -91,9 +91,9 @@ async function onSubmit(event: FormSubmitEvent<Schema>) {
       <h1 class="text-2xl mb-3">
         {{ data.data[0].attributes.title }}
       </h1>
-      <MDC :value="data.data[0].attributes.description" class="break-all" />
+      <MDC :value="data.data[0].attributes.description" />
     </section>
-    <UCard :ui="{ body: { base: 'grid gap-5', background: 'bg-gray-100' } }">
+    <UCard :ui="{ body: { base: 'grid gap-5' } }">
       <img
         alt="blog"
         class="md:max-w-md md:w-auto w-full object-cover rounded-xl"

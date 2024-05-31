@@ -12,7 +12,7 @@ useSeoMeta({
   <WebPageHeader title="BLOG" img="/blog.jpg" />
   <UContainer class="my-32 grid gap-10">
     <NuxtLink
-      class="flex shadow-xl flex-wrap lg:flex-nowrap rounded-xl overflow-hidden"
+      class="flex shadow-xl flex-wrap lg:flex-nowrap rounded-xl overflow-hidden dark:bg-black"
       :to="`/blog/${blog.attributes.slug}`"
       v-for="blog in data.data"
       :key="blog.id"

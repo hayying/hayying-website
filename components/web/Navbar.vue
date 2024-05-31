@@ -46,15 +46,16 @@ const isOpen = ref(false);
 
 <template>
   <nav
-    class="fixed top-9 w-full p-2 lg:px-5 lg:py-3 z-50 flex items-center justify-between transition-all duration-300 bg-white ring-1 ring-gray-200"
+    class="fixed top-9 w-full p-2 lg:px-5 lg:py-3 z-50 flex items-center justify-between bg-white dark:bg-black ring-1 ring-gray-200 dark:ring-gray-800"
   >
     <Logo />
     <UHorizontalNavigation
       :links="links"
       class="hidden xl:block w-max absolute left-1/2 transform -translate-x-1/2"
       :ui="{
-        inactive: 'text-black hover:text-zinc-700',
-        active: 'text-orange-500 after:hidden',
+        inactive:
+          'text-black hover:text-zinc-700 dark:text-white dark:hover:text-zinc-300',
+        active: 'dark:text-orange-500 text-orange-500 after:hidden',
         before: '',
       }"
     />
@@ -84,12 +85,19 @@ const isOpen = ref(false);
           ],
         ]"
       >
-        <UButton :class="buttonClass" icon="bx:user" variant="link" size="xl" />
+        <UButton
+          :class="buttonClass"
+          icon="bx:user"
+          variant="link"
+          size="xl"
+          color="black"
+        />
       </UDropdown>
       <UButton
         :class="buttonClass"
         icon="la:search"
         variant="link"
+        color="black"
         size="xl"
         @click="searchIsOpen = true"
       />
@@ -97,12 +105,13 @@ const isOpen = ref(false);
         class="text-black hover:text-zinc-700 block lg:hidden"
         icon="iconamoon:menu-burger-horizontal-bold"
         @click="isOpen = !isOpen"
+        color="black"
         variant="link"
         size="xl"
       />
     </section>
     <UButton
-      class="rounded-full text-black hidden lg:block"
+      class="rounded-full hidden lg:block"
       label="ONLİNE FORM"
       to="/online-form"
       size="lg"

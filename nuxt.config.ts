@@ -37,9 +37,6 @@ export default defineNuxtConfig({
       apiImgUrl: process.env.API_IMG_URL,
     },
   },
-  colorMode: {
-    preference: "light",
-  },
   googleFonts: {
     families: {
       Poppins: [500],

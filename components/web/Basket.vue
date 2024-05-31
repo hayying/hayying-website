@@ -25,9 +25,7 @@ const { alreadyAdded, products, totalPrice } = storeToRefs(basketStore);
     </UChip>
     <template #panel>
       <section class="p-4 grid gap-5">
-        <p class="text-gray-500" v-if="products.length === 0">
-          Sepetinizde ürün bulunmamaktadır.
-        </p>
+        <p v-if="products.length === 0">Sepetinizde ürün bulunmamaktadır.</p>
         <section
           v-for="product in products"
           class="grid gap-3"

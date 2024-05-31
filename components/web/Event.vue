@@ -7,7 +7,7 @@ const config = useRuntimeConfig();
 
 <template>
   <NuxtLink
-    class="grid items-start group hover:bg-gray-100 overflow-hidden break-all gap-5 p-3 rounded-xl max-w-xs transition-all duration-300"
+    class="grid items-start group hover:bg-gray-100 dark:hover:bg-gray-800 overflow-hidden break-all gap-5 p-3 rounded-xl max-w-xs transition-all duration-300"
     :to="'/etkinlikler/' + event.attributes.slug"
   >
     <img
