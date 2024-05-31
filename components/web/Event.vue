@@ -9,6 +9,7 @@ const config = useRuntimeConfig();
   <NuxtLink
     class="grid items-start group hover:bg-gray-100 dark:hover:bg-gray-800 overflow-hidden break-all gap-5 rounded-xl max-w-xs transition-all duration-300"
     :to="'/etkinlikler/' + event.attributes.slug"
+    v-motion-slide-visible-once-bottom
   >
     <img
       :src="

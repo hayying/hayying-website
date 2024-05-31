@@ -9,6 +9,7 @@ defineProps({
   <NuxtLink
     class="transition-all hover:scale-105 rounded-xl ring-1 ring-gray-200 bg-gray-100 dark:ring-gray-800 dark:bg-black overflow-hidden max-w-[24rem]"
     :to="`/kurslar/${item.attributes.slug}`"
+    v-motion-slide-visible-once-bottom
   >
     <section class="relative group overflow-hidden">
       <img
