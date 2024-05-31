@@ -1,8 +1,13 @@
 <template>
-  <section class="mt-32 bg-fixed bg-[url('/home-contact.jpg')] py-32 bg-cover">
+  <section
+    class="mt-32 bg-fixed bg-[url('/home-contact.jpg')] py-32 bg-cover relative"
+  >
+    <div
+      class="bg-gradient-to-t from-orange-500/40 to-transparent w-full h-full absolute"
+    />
     <UContainer>
       <section
-        class="bg-zinc-950 rounded-xl shadow-xl text-white max-w-lg p-12"
+        class="bg-zinc-950 relative z-10 rounded-xl shadow-xl text-white max-w-lg p-12"
       >
         <h1 class="text-2xl mb-2">BİZE ULAŞIN</h1>
         <p class="text-gray-400 text-sm">
