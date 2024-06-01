@@ -11,5 +11,6 @@ definePageMeta({
   <WebHomeSearch />
   <WebHomeCourses />
   <WebHomeEvents />
+  <WebHomeYoutubeVideos />
   <WebHomeContact />
 </template>
