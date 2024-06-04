@@ -11,7 +11,7 @@ const socials = useState("socials", () => [
   },
   {
     icon: "mdi:whatsapp",
-    href: "https://wa.me/5431187434",
+    href: "https://wa.me/908504509990",
   },
   {
     icon: "mdi:telegram",
