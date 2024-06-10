@@ -106,7 +106,7 @@ const features = [
   {
     title: "Telefon",
     description:
-      "0 (216) 302 00 04 numaralı telefonumuzdan bize ulaşabilirsiniz",
+      "0850 450 99 90 numaralı telefonumuzdan bize ulaşabilirsiniz",
     icon: "mdi:phone",
   },
 ];
