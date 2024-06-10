@@ -71,9 +71,9 @@ const contactClass =
         </section>
         <section class="flex flex-col">
           <h1 class="text-lg text-white mb-5">Bizimle İletişime Geçin</h1>
-          <NuxtLink to="tel:0216302004" :class="contactClass">
+          <NuxtLink to="tel:08504509990" :class="contactClass">
             <UIcon name="mdi:phone" size="20" />
-            0 (216) 302 00 04
+            0850 450 99 90
           </NuxtLink>
           <NuxtLink to="mailto:info@hayying.com" :class="contactClass">
             <UIcon name="mdi:email" size="20" />
