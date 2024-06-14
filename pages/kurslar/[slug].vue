@@ -31,10 +31,7 @@ useSeoMeta({
         v-if="data.data[0].attributes.videoURI"
       />
     </section>
-    <UCard
-      :ui="{ body: { base: 'grid gap-3 ', background: 'bg-gray-100' } }"
-      class="h-max"
-    >
+    <UCard :ui="{ body: { base: 'grid gap-3' } }" class="h-max">
       <img
         alt="blog"
         class="md:max-w-md md:w-[25rem] h-[25rem] w-full"
