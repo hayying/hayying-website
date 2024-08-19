@@ -1,6 +1,6 @@
 <script setup lang="ts">
 //@ts-ignore
-import logo from "/Logo_2.jpeg";
+import logo from "/logo.png";
 useSeoMeta({
   ogImage: logo,
 });
