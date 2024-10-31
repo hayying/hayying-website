@@ -11,7 +11,7 @@ const socials = useState("socials", () => [
   },
   {
     icon: "mdi:whatsapp",
-    href: "https://wa.me/908504509990",
+    href: "https://wa.me/905336695694",
   },
   {
     icon: "mdi:telegram",
@@ -71,7 +71,7 @@ const contactClass =
         </section>
         <section class="flex flex-col">
           <h1 class="text-lg text-white mb-5">Bizimle İletişime Geçin</h1>
-          <NuxtLink to="tel:08504509990" :class="contactClass">
+          <NuxtLink to="tel:05336695694" :class="contactClass">
             <UIcon name="mdi:phone" size="20" />
             0850 450 99 90
           </NuxtLink>
