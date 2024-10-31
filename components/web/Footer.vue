@@ -73,7 +73,7 @@ const contactClass =
           <h1 class="text-lg text-white mb-5">Bizimle İletişime Geçin</h1>
           <NuxtLink to="tel:905336695694" :class="contactClass">
             <UIcon name="mdi:phone" size="20" />
-            0850 450 99 90
+            0(533) 669 56 94
           </NuxtLink>
           <NuxtLink to="mailto:info@hayying.com" :class="contactClass">
             <UIcon name="mdi:email" size="20" />
