@@ -45,27 +45,4 @@ export default defineNuxtConfig({
   googleSignIn: {
     clientId: process.env.GOOGLE_CLIENT_ID,
   },
-
-  app: {
-    head: {
-      script: [
-        {
-          hid: "gtm-script",
-          innerHTML: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'}); var f=d.getElementsByTagName(s)[0], j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:''; j.async=true; j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl; f.parentNode.insertBefore(j,f); })(window,document,'script','dataLayer','GTM-WWTMPF7K');`,
-          type: "text/javascript",
-          charset: "utf-8",
-        },
-      ],
-      noscript: [
-        {
-          hid: "gtm-noscript",
-          innerHTML: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWTMPF7K" height="0" width="0" style="display:none;visibility:hidden"></iframe>`,
-        },
-      ],
-      __dangerouslyDisableSanitizersByTagID: {
-        "gtm-script": ["innerHTML"],
-        "gtm-noscript": ["innerHTML"],
-      },
-    },
-  },
 });
