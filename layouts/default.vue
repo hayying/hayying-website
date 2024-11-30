@@ -7,4 +7,7 @@
   <WebFooter />
   <WebBasket />
   <WebSearch />
+  <section>
+    <Whatsapp />
+  </section>
 </template>
